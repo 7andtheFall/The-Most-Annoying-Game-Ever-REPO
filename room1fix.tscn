@@ -1,0 +1,192 @@
+[gd_scene format=4 uid="uid://bdkbgaxfrdut0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdw6n"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.9063476, 0.86841786, 0.71377856, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n74hw"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0.8585775, 0.90633965, 0.89166546, 1)
+metallic = 0.063
+roughness = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ai0i2"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -3.4840581, 0.42297065, 5.530219, 4.4840584),
+"format": 34896613377,
+"index_count": 198,
+"index_data": PackedByteArray("AAACABMAAAABAAIAAwABAAAAFAACAAEAAwAUAAEAFAAVAAIAFQATAAIABAAVABQAFgAAABMACwAEABQACwAUAAMABgADAAAABgAAABYAAwAJAAsAAwAIAAkABgAIAAMACwAJAAwABgAKAAgADQAMAAoACwAMAA0ADQAKAAYAFwALAA0AGAANAAYADgAXAA0ADgANABgAEgAXAA4AEgAOABgAFwAZAAsAGQAEAAsAEgAaABcAGgAZABcAEgAYABsAGgASABsAGAAGABwAGwAYABwAHAAGABYAGgAbAB0AGwAcAB4AHQAbAB4AHAAWAAUAHgAcAAUABQAWAB8AHgAFAAcABQAfAAcAFgATAB8AIAAeAAcAHQAeACAAIAAHAB8AIQAfABMAIQAgAB8AFQAhABMAIgAdACAAIgAgACEAEAAhABUAEAAiACEABAAQABUAEQAiABAADwAQAAQADwARABAAGQAPAAQAEQAjACIAIwARAA8AIwAPABkAIwAdACIAGgAjABkAIwAaAB0A"),
+"lods": [0.0004129301, PackedByteArray("AAABAAIAAwABAAAABAACAAEAAwAEAAEABQAAAAIABgADAAAABgAAAAUABQACAAcABgAIAAMAAwAIAAkABgAKAAgAAwAJAAsACwAEAAMACwAJAAwADQAMAAoACwAMAA0ADQAKAAYADgANAAYADgALAA0ADgAGAAUADwAEAAsADgAPAAsABAAQAAIADwAQAAQAEAAHAAIADwARABAAEgAFAAcAEgAOAAUAEAASAAcAEgAPAA4AEQASABAAEgARAA8A")],
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/////wLmAAD///////8AAAAA/////wAA//8O7wLmAAD//28Y//8AAP////8AAAAA//8O75UYAAAAAP//AAAAAKV2Du8C5gAApXZvGALmAACldg7vlRgAAP//bxgC5gAApXZvGJUYAAD//28YlRgAAP//AAAAAAAA//8AAP//AAAAAG8Y//8AAAAAAAD//wAAAAAAAAAAAAAAAP//AuYAAP//Du///wAAAAAO7///AAD/////lRgAAP//AACVGAAA//9vGAAAAAD//wAAAuYAAAAAAACVGAAAAABvGAAAAAD//w7vAAAAAAAAbxiVGAAAAAAO7wAAAAAAAP//lRgAAAAADu+VGAAAAAAO7wLmAAAAAG8YAuYAAAAAAAAC5gAA")
+}, {
+"aabb": AABB(-0.8039664, -0.47213316, -3.053462, 1e-05, 4.636433, 3.5982776),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h84ov"]
+resource_name = "window_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -3.4840581, 0.42297065, 5.530219, 4.4840584),
+"attribute_data": PackedByteArray("/59+Rv+f/z//3/8//5//f//f/38bZv8//58AAP+f/z8bZgAA/1//P/9fAADDm35G/5//P/+ffkYbZv8/w5vaeRtmfkb/n/9//1//P/9f/38bZtp5/1////9f/78bZv///5//v/+f////X/+//5//f/+f/7//X/9/w5t+RhtmfkYbZn5Gw5t+Rv8f/3//X/8//1//f/8f/z8bZtp5w5vaecOb2nkbZtp5G2Z+Rhtm2nkbZtp5G2Z+RsOb2nnDm35Gw5t+RsOb2nn/335G/5/aef/f2nnDm/8/w5sAAMObJMb/nyTGw5v/v8Obf/n/n3/5w5v//xtmf/n/X3/5G2Ykxv9fJMYbZv+//x9+Rv9ffkb/H9p5/1/aecOb/z//n9p5w5v/fxtm/3//X9p5/19+RsOb/7/Dm/9/G2b/vxtm/38="),
+"format": 34896613399,
+"index_count": 198,
+"index_data": PackedByteArray("AAACADIAAAABAAIAMwAAADIAMwAyADQAAwAzADQAAwA0AAQANQAGAAcANQA2AAYABQA2ADUABQAIADYACQAIAAUACQAKAAgANwAYADgANwA5ABgAOgA3ADgAOgA4ADsAPAA6ADsAPAA7ABkAFwA6ADwAFwA9ADoAPQA3ADoAFQA9ABcAFQA+AD0APQA/ADcAPgA/AD0APwA5ADcAPgBAAD8APwBBADkAQABBAD8AQAAWAEEAQgAjAEMAQgAlACMARABCAEMARABDAEUAIgBEAEUAIgBFACQACwAMAA0ACwBGAAwADwALAA0AEABGAAsADwANAEcAEAAOAEYASAAPAEcASABHABEASQAPAEgASQAUAA8AEwAUAEkAEwBKABQASgAQABQASgBLABAASwAOABAASwASAA4ATAAbABwATABNABsATgBNAEwATgBPAE0AGgBPAE4AGgAdAE8AHgAfACAAHgAhAB8AJgAnACgAJgApACcAKgArACwAKgAtACsALgAvADAALgAxAC8A"),
+"lods": [0.0004129301, PackedByteArray("AAABAAIAAwAAAAIAAwACAAQABQAGAAcABQAIAAYACQAIAAUACQAKAAgACwAMAA0ACwAOAAwADwALAA0AEAAOAAsADwANABEAEgAOABAAEwAPABEAEwASABAAEwAUAA8AEwAQABQAFQAWABcAFwAWABgAFwAYABkAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgAlACMAJgAnACgAJgApACcAKgArACwAKgAtACsALgAvADAALgAxAC8A")],
+"material": SubResource("StandardMaterial3D_jdw6n"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 80,
+"vertex_data": PackedByteArray("/////wLm/////////////wAA/////////////wAA//8AAP//AAD/////bxj///+/AAD//////7//////////vwAAbxj///+///8AAP///78AAAAA////v///Du8C5lTV////////VNX/////AuZU1f//bxj//1TV//8O75UYVNX//28YAuZU1f////8AAFTV//8AAP//VNX//wAAAABU1f//bxiVGFTVAAAAAP//VNUAAAAAAABU1QAAbxj//1TVAAD//wAAVNUAAP////9U1QAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP////8O7wLmAACldm8YAuYAAP//bxgC5gAApXYO7wLmAAAAAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v///bxiVGP5/pXYO75UY/n///w7vlRj+f6V2bxiVGP5///9vGALm/z+ldm8YlRj/P///bxiVGP8/pXZvGALm/z///w7vlRj/P6V2Du8C5v8///8O7wLm/z+ldg7vlRj/PwAA//8C5v///////5UY//8AAP//lRj/////Du////+/AAAO7////78AAA7vlRhU1QAA//+VGFTVAAAO7wAAVNUAAA7vAuZU1QAA//8C5lTVAAAO7///VNUAAG8YAuZU1QAAAAAC5lTVAABvGJUYVNUAAAAAlRhU1QAAbxgAAFTVAAAAAALm/7///wAAAub/vwAAAACVGP+///8AAJUY/7///w7v//9U1f////+VGFTV//8O7wAAVNX//28YAABU1f//AACVGFTV//8AAALmVNUAAA7vAAD/////Du8AAP//AABvGAAA/////28YAAD///9//7//f/+//3//v/9//7//f/+/////////////////////////////////qiqqKqoqqiqqKqoqqiqqKqoqqiqqKqoqqiqqKqoqqiqqKqoqqiqqKlTVVNVU1VTVVNVU1VTVVNVU1VTV/7//v/+//7//v/+//7//v////3////9/////f////38AAP9/AAD/fwAA/38AAP9//3////9/////f////3///////3////9/////f////38AAP9/AAD/fwAA/38AAP9//3//v/9//7//f/+///////////9U1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNVU1QAA/38AAP9/AAD/fwAA/3+qKqoqqiqqKqoqqiqqKqoqqiqqKqoqqir/v/+//7//v/+//7//v/+/")
+}, {
+"aabb": AABB(-0.8039664, -0.47213316, -3.053462, 1e-05, 4.636433, 3.5982776),
+"attribute_data": PackedByteArray("G2baecObfkbDm9p5G2Z+Rg=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_n74hw"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAVNUAAP////9U1QAA//8AAFTVAAAAAP//VNWqKqoqqiqqKqoqqiqqKqoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ai0i2")
+
+[node name="room" type="Node3D" unique_id=1295234776]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="floor" type="CSGBox3D" parent="." unique_id=1910974788]
+transform = Transform3D(0.8, 0, 0, 0, -3.14722e-08, 0.90999997, 0, -0.71999997, -3.977736e-08, 298, -5.507635e-06, 1)
+use_collision = true
+size = Vector3(1000, 724, 5)
+
+[node name="leftwall" type="CSGBox3D" parent="floor" unique_id=1316361724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 497.5, -6.0000076, 191.00005)
+size = Vector3(45, 750, 386)
+
+[node name="smthn" type="CSGBox3D" parent="floor/leftwall" unique_id=1271085590]
+transform = Transform3D(0.999965, 0, 0, 0, 1, 0, 0, 0, 1, -33.499786, 3.71933e-05, 171.78569)
+size = Vector3(26, 736, 45)
+
+[node name="rightwall" type="CSGBox3D" parent="floor" unique_id=794672403]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 7.1054274e-15, 0, 3.5527137e-15, 1, -504.50018, -14.500001, 191.00006)
+size = Vector3(35, 749, 386)
+
+[node name="doorwayliving" type="CSGBox3D" parent="floor/rightwall" unique_id=1489650615]
+transform = Transform3D(1, 0, 1.7763568e-15, 0, 1, -1.4210855e-14, 0, 0, 0.9999999, 0, 22.666685, -36.00003)
+operation = 2
+size = Vector3(100, 214, 306)
+
+[node name="frontwall" type="CSGBox3D" parent="floor" unique_id=380123452]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 1, -4.3711385e-08, -4.3711385e-08, 4.371139e-08, -4.371139e-08, 1, 1.9999999, -365.50003, 191.00005)
+size = Vector3(45, 1028, 386)
+
+[node name="winder" type="CSGBox3D" parent="floor/frontwall" unique_id=1048746211]
+transform = Transform3D(1, 0, 1.7763568e-15, 0, 1, -1.4715063e-14, 0, 3.9893428e-16, 1, -4.5000305, 234.99992, 29.000015)
+transparency = 1.0
+operation = 2
+size = Vector3(109, 172, 178)
+
+[node name="smthn2" type="CSGBox3D" parent="floor/frontwall" unique_id=480704027]
+transform = Transform3D(0.8399705, 0, 1.7763568e-15, 7.1054274e-15, 1, -1.4715063e-14, 2.6645353e-15, 3.9893428e-16, 1, 39.324524, 0.50003207, 171.78568)
+size = Vector3(40, 1001, 45)
+
+[node name="backwall" type="CSGBox3D" parent="floor" unique_id=1006507486]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 1, -4.3711385e-08, -4.3711385e-08, 4.371139e-08, -4.371139e-08, 1, -2.249999, 365.50003, 191)
+size = Vector3(45, 1043, 386)
+
+[node name="closet2" type="CSGBox3D" parent="floor/backwall" unique_id=444357127]
+transform = Transform3D(1, -1.861622e-12, 1.7763568e-15, -7.1054274e-15, 0.99994713, -4.2069174e-12, 0, -2.109913e-12, 1, -59.555664, 164.99928, -1.5000458)
+size = Vector3(103, 49, 387)
+
+[node name="closet2" type="CSGBox3D" parent="floor/backwall/closet2" unique_id=1750366267]
+transform = Transform3D(0.99999964, -1.8651747e-12, 1.7763568e-15, -7.1054274e-15, 0.9999471, -4.2033647e-12, -4.440892e-15, -2.085044e-12, 0.9999996, -2.6113892, -300.02512, -1.5)
+size = Vector3(103, 49, 387)
+
+[node name="doorwayliving" type="CSGBox3D" parent="floor/backwall" unique_id=1646147978]
+transform = Transform3D(1, 0, 1.7763568e-15, 0, 1, -1.4715063e-14, 0, 3.9893428e-16, 1, 0, 342, -36.000015)
+operation = 2
+size = Vector3(100, 196, 306)
+
+[node name="window" type="Node3D" parent="." unique_id=109709414]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="window" unique_id=266083327]
+transform = Transform3D(-3.1472197e-08, 0, 0.315, 0, 0.31103995, 0, -0.71999997, 0, -1.3769085e-08, 1.49, 1.41, 2.3099997)
+mesh = SubResource("ArrayMesh_h84ov")
+
+[node name="bathroom" type="Node3D" parent="." unique_id=1172865070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
+
+[node name="floor" type="CSGBox3D" parent="bathroom" unique_id=920810755]
+transform = Transform3D(-0.8000001, -6.2944395e-08, -3.4774472e-15, 0, -3.14722e-08, 0.90999997, -6.9938224e-08, 0.71999997, 3.9777355e-08, -567.00037, -2.127521e-05, 102.72004)
+use_collision = true
+size = Vector3(1058, 1060, 5)
+
+[node name="leftwall" type="CSGBox3D" parent="bathroom/floor" unique_id=478246669]
+transform = Transform3D(1.0000001, 3.8369308e-13, -4.2351647e-22, 0, 1, 7.1054274e-15, -2.5622747e-20, 3.5527137e-15, 1, 280.00012, -139.88892, 191.00006)
+size = Vector3(45, 774, 386)
+
+[node name="rightwall" type="CSGBox3D" parent="bathroom/floor" unique_id=1349542682]
+transform = Transform3D(1.0000001, 8.029133e-13, 4.912791e-20, 7.1054274e-15, 1, 0, -5.3363076e-20, 3.5527137e-15, 1, -498.50015, -143.88892, 191.00006)
+size = Vector3(45, 768, 386)
+
+[node name="backwall3" type="CSGBox3D" parent="bathroom/floor/rightwall" unique_id=490025063]
+transform = Transform3D(-1, 8.742265e-08, 9.126464e-09, -8.742296e-08, -1, -7.8296225e-08, 9.126463e-09, -7.8296225e-08, 0.9999999, -0.7497711, 542.44446, -3.0517578e-05)
+size = Vector3(47, 316, 386)
+
+[node name="doorwayliving" type="CSGBox3D" parent="bathroom/floor/rightwall" unique_id=1595557787]
+transform = Transform3D(1, 0, 1.7763556e-15, 7.1054274e-15, 1, -2.1316282e-14, 0, 0, 0.9999999, 0, -17.38888, -36.00003)
+operation = 2
+size = Vector3(100, 187, 306)
+
+[node name="frontwall" type="CSGBox3D" parent="bathroom/floor" unique_id=691551223]
+transform = Transform3D(-4.3711157e-08, -1.0000001, -4.371139e-08, 1, -4.371122e-08, -4.371121e-08, 4.371143e-08, -4.3711392e-08, 1, -127.00018, -504.38928, 191.00006)
+size = Vector3(45, 770, 386)
+
+[node name="backwall" type="CSGBox3D" parent="bathroom/floor" unique_id=273618304]
+transform = Transform3D(-4.3710806e-08, -1.0000001, -4.371139e-08, 1, -4.3711253e-08, -4.371128e-08, 4.371143e-08, -4.3711392e-08, 1, 144.25018, 226.61104, 191.00008)
+size = Vector3(45, 236, 386)
+
+[node name="backwall_shower" type="CSGBox3D" parent="bathroom/floor/backwall" unique_id=1565633258]
+transform = Transform3D(-4.3711573e-08, -1, -2.5458244e-08, 1, -4.371126e-08, -4.371142e-08, 4.3711264e-08, -2.5458238e-08, 0.9999999, 153.13922, 92.44446, -6.1035156e-05)
+size = Vector3(47, 352, 386)
+
+[node name="showerhandle" type="CSGBox3D" parent="bathroom/floor/backwall/backwall_shower" unique_id=691688454]
+transform = Transform3D(0.70710355, -1.2690256e-08, 0.707108, 7.0000716e-09, 0.99998605, 1.0946531e-08, -0.7070947, -2.7900882e-09, 0.7070976, 22.500183, 9.777771, 147.51389)
+size = Vector3(10, 14, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="bathroom/floor/backwall/backwall_shower/showerhandle" unique_id=1408564734]
+transform = Transform3D(0.25881734, -2.0648095e-08, 0.9659276, 6.246803e-09, 0.99996734, 1.9706881e-08, -0.9658846, 9.2641983e-10, 0.25881064, 19.7406, 0, 29.976868)
+size = Vector3(10, 14, 50)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="bathroom/floor/backwall/backwall_shower/showerhandle/CSGBox3D2" unique_id=500339024]
+transform = Transform3D(0.794227, 0.019263355, 0.6073158, -0.6076001, 0.033492163, 0.79354066, -0.00505693, -0.99926007, 0.038305894, 6.5336304, 1.2939758, 27.810303)
+radius = 25.0
+height = 4.0
+sides = 64
+
+[node name="backwall2" type="CSGBox3D" parent="bathroom/floor/backwall" unique_id=1063359949]
+transform = Transform3D(-1, 8.742265e-08, 9.126474e-09, -8.742197e-08, -1.0000001, -9.65494e-08, 9.126623e-09, -9.654937e-08, 0.9999999, 303.41656, 368.66693, 1.1868286)
+size = Vector3(47, 576, 386)
+
+[node name="ledge" type="CSGBox3D" parent="bathroom/floor/backwall" unique_id=370289247]
+transform = Transform3D(-4.3711367e-08, -0.9999699, -3.4583515e-08, 0.9999995, -4.3710116e-08, -5.2835972e-08, 5.2837954e-08, -3.4582747e-08, 0.99996215, 0.5000305, 377.99908, -180.3561)
+size = Vector3(579, 44, 25)
