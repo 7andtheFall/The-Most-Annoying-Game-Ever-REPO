@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://f5xvre1r2ijd"]
+
+[ext_resource type="PackedScene" uid="uid://c13xmw4asxy5" path="res://Clock.glb" id="1_venu5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_venu5"]
+albedo_color = Color(0.21518216, 0.21518219, 0.21518219, 1)
+
+[node name="Clock" unique_id=1143272731 instance=ExtResource("1_venu5")]
+
+[node name="Cube" parent="." index="0" unique_id=449643405]
+surface_material_override/0 = SubResource("StandardMaterial3D_venu5")
