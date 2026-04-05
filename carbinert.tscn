@@ -1,0 +1,334 @@
+[gd_scene format=3 uid="uid://5xil3wyjgcqk"]
+
+[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="1_dd1u3"]
+[ext_resource type="Material" uid="uid://bup8rnryxbnnh" path="res://wood1.tres" id="1_u7nvq"]
+[ext_resource type="Texture2D" uid="uid://dr0rwwymnsyid" path="res://woodtext.jpg" id="3_0vjcp"]
+
+[sub_resource type="Animation" id="Animation_rhv10"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.025, 0.39, -0.006)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.547, -0.006)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../drawer3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.025, -0.121, -0.006)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../drawer4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.025, -0.38422114, -0.006)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../drawer2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.025, 0.126, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_5n3o1"]
+resource_name = "drawer1.close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.5, 0.387, -0.006), Vector3(-0.025, 0.387, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_xwpxs"]
+resource_name = "drawer1.open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.025, 0.387, -0.006), Vector3(-0.5, 0.387, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_u7nvq"]
+resource_name = "drawer2.close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../drawer2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.5, 0.126, -0.006), Vector3(-0.025, 0.126, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_0vjcp"]
+resource_name = "drawer2.open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../drawer2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.025, 0.126, -0.006), Vector3(-0.5, 0.126, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_lqy3y"]
+resource_name = "drawer3.close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../drawer3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.5, -0.121, -0.006), Vector3(-0.025, -0.121, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_f2iat"]
+resource_name = "drawer3.open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../drawer3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.025, -0.121, -0.006), Vector3(-0.5, -0.12112898, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_ta030"]
+resource_name = "drawer4.close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../drawer4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.5, -0.384, -0.006), Vector3(-0.5, -0.384, -0.006)]
+}
+
+[sub_resource type="Animation" id="Animation_3adnq"]
+resource_name = "drawer4.open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../drawer4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.025, -0.38422114, -0.006), Vector3(-0.5, -0.384, -0.006)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lqy3y"]
+_data = {
+&"RESET": SubResource("Animation_rhv10"),
+&"drawer1.close": SubResource("Animation_5n3o1"),
+&"drawer1.open": SubResource("Animation_xwpxs"),
+&"drawer2.close": SubResource("Animation_u7nvq"),
+&"drawer2.open": SubResource("Animation_0vjcp"),
+&"drawer3.close": SubResource("Animation_lqy3y"),
+&"drawer3.open": SubResource("Animation_f2iat"),
+&"drawer4.close": SubResource("Animation_ta030"),
+&"drawer4.open": SubResource("Animation_3adnq")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2iat"]
+albedo_color = Color(0.3796705, 0.09866241, 0.02462131, 1)
+albedo_texture = ExtResource("3_0vjcp")
+
+[node name="cbarienrt" type="Node3D" unique_id=2139234721]
+
+[node name="seperate_" type="AnimationPlayer" parent="." unique_id=2059004067]
+root_node = NodePath("../carbinert/drawer1")
+libraries/ = SubResource("AnimationLibrary_lqy3y")
+
+[node name="carbinert" type="CSGBox3D" parent="." unique_id=281695871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.547, -0.006)
+use_collision = true
+size = Vector3(0.6, 1.1, 1)
+material = ExtResource("1_u7nvq")
+
+[node name="hole" type="CSGBox3D" parent="carbinert" unique_id=1321260063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.055481076, 0.39154053, -0.0031929016)
+operation = 2
+size = Vector3(0.5391846, 0.21691895, 0.92375946)
+
+[node name="hole2" type="CSGBox3D" parent="carbinert" unique_id=1289309065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11096215, 0.12969375, -0.006385803)
+operation = 2
+size = Vector3(0.5391846, 0.21691895, 0.92375946)
+
+[node name="hole3" type="CSGBox3D" parent="carbinert" unique_id=34194843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.055481076, -0.12191087, -0.0031929016)
+operation = 2
+size = Vector3(0.5391846, 0.21691895, 0.92375946)
+
+[node name="hole4" type="CSGBox3D" parent="carbinert" unique_id=1386714034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11096215, -0.37965435, -0.006385803)
+operation = 2
+size = Vector3(0.5391846, 0.21691895, 0.92375946)
+
+[node name="drawer1" type="CSGBox3D" parent="carbinert" unique_id=832430824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, 0.39, -0.006)
+size = Vector3(0.5391846, 0.21162415, 0.9131677)
+material = ExtResource("1_u7nvq")
+
+[node name="space1" type="CSGBox3D" parent="carbinert/drawer1" unique_id=79548222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034780428, 0.020634055, -0.0031626523)
+operation = 2
+size = Vector3(0.47857666, 0.17459106, 0.8021679)
+
+[node name="handle" type="CSGBox3D" parent="carbinert/drawer1" unique_id=1792276722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30793738, 0.005703926, 0.0030057281)
+size = Vector3(0.025390625, 0.055419922, 0.17883301)
+material = ExtResource("1_dd1u3")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="carbinert/drawer1/handle" unique_id=1071732823]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.022849202, 0.0031023622, 0.07572266)
+size = Vector3(0.026367188, 0.047576904, 0.042053223)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="carbinert/drawer1/handle" unique_id=138397506]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.02211225, 0.0009980798, -0.07507227)
+size = Vector3(0.025390625, 0.051940918, 0.042053223)
+
+[node name="drawer2" type="CSGBox3D" parent="carbinert" unique_id=45206515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, 0.126, -0.006)
+size = Vector3(0.5391846, 0.21162415, 0.9131677)
+material = ExtResource("1_u7nvq")
+
+[node name="space1" type="CSGBox3D" parent="carbinert/drawer2" unique_id=1722389279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034780502, 0.020634055, -0.0031626523)
+operation = 2
+size = Vector3(0.47857666, 0.17459106, 0.8021679)
+
+[node name="handle" type="CSGBox3D" parent="carbinert/drawer2" unique_id=1675671629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30656457, 0.0027711987, -0.005999999)
+size = Vector3(0.025390625, 0.055419922, 0.17883301)
+material = ExtResource("1_dd1u3")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="carbinert/drawer2/handle" unique_id=379065068]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.022849202, 0.0031023622, 0.07572266)
+size = Vector3(0.026367188, 0.047576904, 0.042053223)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="carbinert/drawer2/handle" unique_id=1634342954]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.02211225, 0.0009980798, -0.07507227)
+size = Vector3(0.025390625, 0.051940918, 0.042053223)
+
+[node name="drawer3" type="CSGBox3D" parent="carbinert" unique_id=145488827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, -0.121, -0.006)
+size = Vector3(0.5391846, 0.21162415, 0.9131677)
+material = ExtResource("1_u7nvq")
+
+[node name="space1" type="CSGBox3D" parent="carbinert/drawer3" unique_id=452983120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034780428, 0.020634055, -0.0031626523)
+operation = 2
+size = Vector3(0.47857666, 0.17459106, 0.8021679)
+
+[node name="handle" type="CSGBox3D" parent="carbinert/drawer3" unique_id=2008273041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30793738, 0.005703926, 0.0030057281)
+size = Vector3(0.025390625, 0.055419922, 0.17883301)
+material = ExtResource("1_dd1u3")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="carbinert/drawer3/handle" unique_id=1367280133]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.022849202, 0.0031023622, 0.07572266)
+size = Vector3(0.026367188, 0.047576904, 0.042053223)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="carbinert/drawer3/handle" unique_id=1143204627]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.02211225, 0.0009980798, -0.07507227)
+size = Vector3(0.025390625, 0.051940918, 0.042053223)
+
+[node name="drawer4" type="CSGBox3D" parent="carbinert" unique_id=1251034404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, -0.38422114, -0.006)
+size = Vector3(0.5391846, 0.21162415, 0.9131677)
+material = ExtResource("1_u7nvq")
+
+[node name="space1" type="CSGBox3D" parent="carbinert/drawer4" unique_id=1539526862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034780428, 0.020634055, -0.0031626523)
+operation = 2
+size = Vector3(0.47857666, 0.17459106, 0.8021679)
+
+[node name="handle" type="CSGBox3D" parent="carbinert/drawer4" unique_id=1931809869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30793738, 0.005703926, 0.0030057281)
+size = Vector3(0.025390625, 0.055419922, 0.17883301)
+material = ExtResource("1_dd1u3")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="carbinert/drawer4/handle" unique_id=616992717]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.022849202, 0.0031023622, 0.07572266)
+size = Vector3(0.026367188, 0.047576904, 0.042053223)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="carbinert/drawer4/handle" unique_id=2080875081]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.02211225, 0.0009980798, -0.07507227)
+size = Vector3(0.025390625, 0.051940918, 0.042053223)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="carbinert" unique_id=1422154828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104522705, 0.5586245, 0.0015411377)
+size = Vector3(0.65457153, 0.034301758, 1.0680847)
+material = SubResource("StandardMaterial3D_f2iat")
