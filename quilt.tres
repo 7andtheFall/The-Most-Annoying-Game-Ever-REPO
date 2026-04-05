@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqtj0jblyhq87"]
+
+[ext_resource type="Texture2D" uid="uid://bnurecek51hnu" path="res://Kimberbell Basics MAS8243-O2 Orange Tonal Scrolls by Maywood Studio _ Shabby Fabrics - Google Chrome 3_31_2026 12_05_47 PM.png" id="1_3ffkp"]
+
+[resource]
+albedo_color = Color(1, 1, 0.47843137, 1)
+albedo_texture = ExtResource("1_3ffkp")

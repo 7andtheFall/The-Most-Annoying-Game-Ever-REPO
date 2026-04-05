@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bup8rnryxbnnh"]
+
+[ext_resource type="Texture2D" uid="uid://dr0rwwymnsyid" path="res://woodtext.jpg" id="1_73fht"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k50j3"]
+load_path = "res://.godot/imported/IMG_1309.png-c7ff6005a0731eee6e20f65c71ebc24f.s3tc.ctex"
+
+[resource]
+albedo_color = Color(0.9562444, 0.9255405, 0.8184897, 1)
+albedo_texture = ExtResource("1_73fht")
+roughness_texture = SubResource("CompressedTexture2D_k50j3")
+roughness_texture_channel = 3
