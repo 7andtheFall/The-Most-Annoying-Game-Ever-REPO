@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgr2mumeju5yt"
-path="res://.godot/imported/OutRing.png-354c5fbe4c6368a53c6a1f550a98e941.ctex"
+path="res://.godot/imported/OutRing.png-32079d3550d4ae6bf94e49a3a83937c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/OutRing.png"
-dest_files=["res://.godot/imported/OutRing.png-354c5fbe4c6368a53c6a1f550a98e941.ctex"]
+source_file="res://OutRing.png"
+dest_files=["res://.godot/imported/OutRing.png-32079d3550d4ae6bf94e49a3a83937c4.ctex"]
 
 [params]
 

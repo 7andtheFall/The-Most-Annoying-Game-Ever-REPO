@@ -19,16 +19,24 @@ size = Vector3(3.2087402, 1.7724609, 3.5093994)
 
 [node name="Room" parent="." unique_id=1101723282 instance=ExtResource("1_2sw64")]
 
-[node name="leftwall" parent="Room/room/bathroom" parent_id_path=PackedInt32Array(1101723282, 1172865070) index="1" unique_id=478246669]
-use_collision = true
-
 [node name="frontwall" parent="Room/room/bathroom" parent_id_path=PackedInt32Array(1101723282, 1172865070) index="4" unique_id=691551223]
 transform = Transform3D(-2.7975421e-08, 0.79999757, 3.4969105e-08, 8.305193e-09, -3.977726e-08, 0.9099997, 0.7199975, 3.8466098e-08, 8.305287e-09, -465.40005, 173.81, -260.44025)
-use_collision = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/sink2" parent_id_path=PackedInt32Array(1101723282, 2005923826) index="3" unique_id=1450268726]
+[node name="Cube" parent="Room/room/doorfixed_living/mainDoor" parent_id_path=PackedInt32Array(1101723282, 967027690) index="0" unique_id=1478988103]
+surface_material_override/0 = null
+
+[node name="bathroomD" parent="Room/room/doorfixed_bathroom/bathroomDoor" parent_id_path=PackedInt32Array(1101723282, 1885445016) index="0" unique_id=210048323]
+surface_material_override/0 = null
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Room/sink2" parent_id_path=PackedInt32Array(1101723282, 2005923826) index="3" unique_id=1450268726]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06549072, -0.48339844, -0.12225342)
 shape = SubResource("BoxShape3D_xu13d")
+
+[node name="Cube" parent="Room/Clock2/Clock" parent_id_path=PackedInt32Array(1101723282, 1430240403) index="0" unique_id=89867201]
+surface_material_override/0 = null
+
+[node name="TestObject" parent="Room" index="6" unique_id=1939645823]
+interaction_type = "Explode"
 
 [node name="TestObject" type="StaticBody3D" parent="." unique_id=404869303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07842898, 0)

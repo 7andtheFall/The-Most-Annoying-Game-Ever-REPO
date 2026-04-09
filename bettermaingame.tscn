@@ -1,20 +1,20 @@
-[gd_scene format=4 uid="uid://bxpmq2nwu5gui"]
+[gd_scene format=4 uid="uid://dslmy28apajac"]
 
-[ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_1n4hr"]
-[ext_resource type="Texture2D" uid="uid://3p74av2eqn74" path="res://IMG_1230.png" id="2_io5a2"]
-[ext_resource type="Texture2D" uid="uid://ca58k2amvcheo" path="res://IMG_1231.png" id="3_rrtow"]
-[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_se3ai"]
-[ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="5_tn8bx"]
-[ext_resource type="Script" uid="uid://dnh1g33qx3ty0" path="res://main_handle.gd" id="6_6e1c6"]
-[ext_resource type="Script" uid="uid://b3o8mdvpao6t" path="res://inside_glow.gd" id="7_7kgk7"]
-[ext_resource type="Script" uid="uid://cwkyw2p8hj8v2" path="res://outside_glow.gd" id="8_8hlkx"]
-[ext_resource type="PackedScene" uid="uid://d3rqormal7yoa" path="res://sink.tscn" id="9_kxqj0"]
-[ext_resource type="Texture2D" uid="uid://cbaj74uwfhbwk" path="res://Sky_Anime_03_Day_a.png" id="10_epuje"]
-[ext_resource type="Script" uid="uid://cwigbsw1je2j8" path="res://glow_script.gd" id="11_btn40"]
-[ext_resource type="Script" uid="uid://cev6pqcfsrg25" path="res://dissapear_glow.gd" id="12_io5a2"]
+[ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_p4k2y"]
+[ext_resource type="Texture2D" uid="uid://3p74av2eqn74" path="res://IMG_1230.png" id="2_ltao8"]
+[ext_resource type="Texture2D" uid="uid://ca58k2amvcheo" path="res://IMG_1231.png" id="3_6b4d8"]
+[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_5660y"]
+[ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="5_trw1n"]
+[ext_resource type="Script" uid="uid://dnh1g33qx3ty0" path="res://main_handle.gd" id="6_57gw7"]
+[ext_resource type="Script" uid="uid://b3o8mdvpao6t" path="res://inside_glow.gd" id="7_tsbbm"]
+[ext_resource type="Script" uid="uid://cwkyw2p8hj8v2" path="res://outside_glow.gd" id="8_3mg15"]
+[ext_resource type="PackedScene" uid="uid://d3rqormal7yoa" path="res://sink.tscn" id="9_k4y7n"]
+[ext_resource type="Script" uid="uid://cwigbsw1je2j8" path="res://glow_script.gd" id="10_ldg1p"]
+[ext_resource type="Texture2D" uid="uid://cbaj74uwfhbwk" path="res://Sky_Anime_03_Day_a.png" id="11_gc7wk"]
+[ext_resource type="Script" uid="uid://cev6pqcfsrg25" path="res://dissapear_glow.gd" id="12_ornpb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k81pi"]
-albedo_texture = ExtResource("2_io5a2")
+albedo_texture = ExtResource("2_ltao8")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb4hf"]
@@ -197,7 +197,7 @@ shadow_mesh = SubResource("ArrayMesh_jewwd")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5lff"]
 blend_mode = 4
 cull_mode = 1
-albedo_texture = ExtResource("3_rrtow")
+albedo_texture = ExtResource("3_6b4d8")
 normal_scale = 1.1
 normal_texture = SubResource("CompressedTexture2D_i4t5k")
 uv1_scale = Vector3(5, 5, 5)
@@ -389,9 +389,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jm8fw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tndcu"]
-albedo_color = Color(0.69803923, 0.6627451, 0.56078434, 1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_e23r4"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6yypm"]
@@ -553,8 +550,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e23r4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6lpx"]
-albedo_color = Color(0.69803923, 0.6627451, 0.56078434, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6m81"]
+albedo_color = Color(0.92937654, 0.7297973, 0.57300794, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tndcu"]
 size = Vector3(0.4466257, 3.6878662, 3.947939)
@@ -562,23 +559,8 @@ size = Vector3(0.4466257, 3.6878662, 3.947939)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otq2g"]
 albedo_color = Color(0.17501733, 0.06283314, 0.0038685212, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_io5a2"]
-size = Vector3(2.9467773, 3.5327148, 2.8423767)
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x2lnx"]
-panorama = ExtResource("10_epuje")
-energy_multiplier = 0.7
-
-[sub_resource type="Sky" id="Sky_tndcu"]
-sky_material = SubResource("PanoramaSkyMaterial_x2lnx")
-
-[sub_resource type="Environment" id="Environment_e23r4"]
-background_mode = 2
-background_energy_multiplier = 0.9
-sky = SubResource("Sky_tndcu")
-ambient_light_color = Color(0.65648144, 0.52455574, 0.120740764, 1)
-ambient_light_sky_contribution = 0.95
-ambient_light_energy = 5.56
+[sub_resource type="BoxShape3D" id="BoxShape3D_xu13d"]
+size = Vector3(2.3082275, 1.9667969, 2.5802002)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ho1v"]
 resource_name = "Material"
@@ -620,419 +602,433 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vyj5p")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnng4"]
-albedo_color = Color(0.2382622, 0.2382622, 0.23826218, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uiwhk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_otq2g"]
 size = Vector3(0.23291016, 1.6816406, 0.3684082)
 
-[sub_resource type="BoxMesh" id="BoxMesh_rrtow"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x2lnx"]
+panorama = ExtResource("11_gc7wk")
+energy_multiplier = 0.7
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_se3ai"]
+[sub_resource type="Sky" id="Sky_tndcu"]
+sky_material = SubResource("PanoramaSkyMaterial_x2lnx")
+
+[sub_resource type="Environment" id="Environment_e23r4"]
+background_mode = 2
+background_energy_multiplier = 0.9
+sky = SubResource("Sky_tndcu")
+ambient_light_color = Color(0.65648144, 0.52455574, 0.120740764, 1)
+ambient_light_sky_contribution = 0.95
+ambient_light_energy = 5.56
+
+[sub_resource type="BoxMesh" id="BoxMesh_cuu4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfmxy"]
 albedo_color = Color(0.14705655, 0.09103928, 0.021058232, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tn8bx"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_l262f"]
 size = Vector3(3.2087402, 1.7724609, 3.5093994)
 
-[node name="Room" type="Node3D" unique_id=1101723282]
+[node name="MAINGAME" type="Node3D" unique_id=120281920]
 
-[node name="Player" parent="." unique_id=1436274067 instance=ExtResource("1_1n4hr")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.4890759, -0.040685907, -0.3713696)
+[node name="Room" type="Node3D" parent="." unique_id=1101723282]
 
-[node name="room" type="Node3D" parent="." unique_id=1295234776]
+[node name="Player" parent="Room" unique_id=1436274067 instance=ExtResource("1_p4k2y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4890759, -0.040685907, -0.3713696)
+
+[node name="room" type="Node3D" parent="Room" unique_id=1295234776]
 transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0, 0, 0)
 
-[node name="bedroom" type="Node3D" parent="room" unique_id=1402929804]
+[node name="bedroom" type="Node3D" parent="Room/room" unique_id=1402929804]
 transform = Transform3D(0.9999998, 3.5293036e-22, -5.921189e-15, 3.5293036e-22, 0.9999998, 0, -1.1842378e-14, -2.9605944e-15, 0.9999998, -5.0862625e-05, -1.5158244e-12, 1.2715656e-05)
 
-[node name="floor" type="CSGBox3D" parent="room/bedroom" unique_id=1910974788]
+[node name="floor" type="CSGBox3D" parent="Room/room/bedroom" unique_id=1910974788]
 transform = Transform3D(0.79999995, -4.263202e-15, -5.56696e-22, -2.8234104e-22, -3.1472208e-08, 0.91, 9.473793e-15, -0.72, -3.9777355e-08, 298.00006, -5.507634e-06, 0.99998724)
 use_collision = true
 size = Vector3(1000, 724, 5)
 material = SubResource("StandardMaterial3D_k81pi")
 
-[node name="leftwall" type="CSGBox3D" parent="room/bedroom" unique_id=1316361724]
+[node name="leftwall" type="CSGBox3D" parent="Room/room/bedroom" unique_id=1316361724]
 transform = Transform3D(0.8, -4.2632566e-15, -5.56696e-22, -2.823443e-22, -3.1472208e-08, 0.91, 9.473903e-15, -0.72, -3.977736e-08, 696.00006, 173.81004, 5.3199854)
 use_collision = true
 size = Vector3(45, 750, 386)
 material = SubResource("StandardMaterial3D_wb4hf")
 
-[node name="smthn" type="CSGBox3D" parent="room/bedroom/leftwall" unique_id=1271085590]
+[node name="smthn" type="CSGBox3D" parent="Room/room/bedroom/leftwall" unique_id=1271085590]
 transform = Transform3D(0.999965, 0, 0, 0, 1, 0, 0, 0, 1, -33.499786, 3.71933e-05, 171.78569)
 size = Vector3(26, 736, 45)
 material = SubResource("StandardMaterial3D_i4t5k")
 
-[node name="backwall" type="CSGBox3D" parent="room/bedroom" unique_id=1006507486]
+[node name="backwall" type="CSGBox3D" parent="Room/room/bedroom" unique_id=1006507486]
 transform = Transform3D(-3.4969116e-08, -0.8, -3.4969112e-08, 8.305159e-09, -3.9777365e-08, 0.91, -0.72, 3.1472194e-08, -8.305159e-09, 296.20004, 173.80998, -262.16003)
 use_collision = true
 size = Vector3(45, 1043, 386)
 material = SubResource("StandardMaterial3D_gp3d3")
 
-[node name="closet2" type="CSGBox3D" parent="room/bedroom/backwall" unique_id=444357127]
+[node name="closet2" type="CSGBox3D" parent="Room/room/bedroom/backwall" unique_id=444357127]
 transform = Transform3D(1, -1.861622e-12, 1.7763568e-15, -7.1054274e-15, 0.99994713, -4.2069174e-12, 0, -2.109913e-12, 1, -59.555664, 164.99928, -1.5000458)
 size = Vector3(103, 49, 387)
 material = SubResource("StandardMaterial3D_hjdf2")
 
-[node name="closet3" type="CSGBox3D" parent="room/bedroom/backwall" unique_id=1750366267]
+[node name="closet3" type="CSGBox3D" parent="Room/room/bedroom/backwall" unique_id=1750366267]
 transform = Transform3D(0.9999994, -3.723244e-12, 2.6645353e-15, -1.4210855e-14, 0.9998941, -8.409777e-12, -3.5527137e-15, -4.1882504e-12, 0.99999934, -62.167023, -135.00983, -3.0000458)
 size = Vector3(103, 49, 387)
 material = SubResource("StandardMaterial3D_w2d26")
 
-[node name="doorwayliving" type="CSGBox3D" parent="room/bedroom/backwall" unique_id=1646147978]
+[node name="doorwayliving" type="CSGBox3D" parent="Room/room/bedroom/backwall" unique_id=1646147978]
 transform = Transform3D(0.9999984, 2.4868996e-14, -4.440892e-15, 2.1316282e-14, 0.999999, 6.6012196e-15, -1.7763568e-15, 6.0795065e-14, 0.9999985, 3.0517578e-05, 343.40277, -36.000015)
 operation = 2
 size = Vector3(100, 193.19434, 306)
 
-[node name="frontwall" type="CSGBox3D" parent="room/bedroom" unique_id=380123452]
+[node name="frontwall" type="CSGBox3D" parent="Room/room/bedroom" unique_id=380123452]
 transform = Transform3D(-3.4969116e-08, -0.8, -3.4969112e-08, 8.305159e-09, -3.9777365e-08, 0.91, -0.72, 3.1472194e-08, -8.305159e-09, 299.60007, 173.81006, 264.16006)
 use_collision = true
 size = Vector3(45, 1028, 386)
 material = SubResource("StandardMaterial3D_fa2lm")
 
-[node name="winder" type="CSGBox3D" parent="room/bedroom/frontwall" unique_id=1048746211]
+[node name="winder" type="CSGBox3D" parent="Room/room/bedroom/frontwall" unique_id=1048746211]
 transform = Transform3D(1, 0, 1.7763568e-15, 0, 1, -1.4715063e-14, 0, 3.9893428e-16, 1, -4.5000305, 234.99992, 29.000015)
 transparency = 1.0
 operation = 2
 size = Vector3(109, 172, 178)
 
-[node name="smthn2" type="CSGBox3D" parent="room/bedroom/frontwall" unique_id=480704027]
+[node name="smthn2" type="CSGBox3D" parent="Room/room/bedroom/frontwall" unique_id=480704027]
 transform = Transform3D(0.8399705, 0, 1.7763568e-15, 7.1054274e-15, 1, -1.4715063e-14, 2.6645353e-15, 3.9893428e-16, 1, 39.324524, 0.50003207, 171.78568)
 size = Vector3(40, 1001, 45)
 material = SubResource("StandardMaterial3D_fmyxq")
 
-[node name="window" type="Node3D" parent="room/bedroom" unique_id=109709414]
+[node name="window" type="Node3D" parent="Room/room/bedroom" unique_id=109709414]
 transform = Transform3D(100.000015, -3.5293047e-20, 5.921191e-13, -3.5293047e-20, 100.000015, -2.0897686e-34, 1.1842381e-12, 2.9605954e-13, 100.000015, 5.0862633e-05, 1.5158246e-12, -1.2715658e-05)
 
-[node name="Cube" type="MeshInstance3D" parent="room/bedroom/window" unique_id=266083327]
+[node name="Cube" type="MeshInstance3D" parent="Room/room/bedroom/window" unique_id=266083327]
 transform = Transform3D(-3.1472197e-08, 0, 0.315, 0, 0.31103995, 0, -0.71999997, 0, -1.3769085e-08, 1.49, 1.41, 2.3099997)
 mesh = SubResource("ArrayMesh_h84ov")
 
-[node name="light_bedroom" type="Node3D" parent="room/bedroom" unique_id=17307645]
+[node name="light_bedroom" type="Node3D" parent="Room/room/bedroom" unique_id=17307645]
 transform = Transform3D(22.770647, 0, 0, 0, 18.733109, 0, 0, 0, 21.47719, 294.24417, 292.28842, -5.413297e-19)
 
-[node name="Light" type="OmniLight3D" parent="room/bedroom/light_bedroom" unique_id=2076205893]
+[node name="Light" type="OmniLight3D" parent="Room/room/bedroom/light_bedroom" unique_id=2076205893]
 transform = Transform3D(0.9999377, -0.0072565344, 0.008511011, 0.007549586, 0.9993621, -0.03490889, -0.008252309, 0.03497097, 0.99935436, -0.078474104, 2.38859, -0.19446477)
 light_energy = 2.285
 omni_range = 4096.0
 omni_attenuation = 2.0
 
-[node name="Cylinder" type="MeshInstance3D" parent="room/bedroom/light_bedroom" unique_id=889483481]
+[node name="Cylinder" type="MeshInstance3D" parent="Room/room/bedroom/light_bedroom" unique_id=889483481]
 transform = Transform3D(1.9872367, 0, 0, 0, 0.25983432, 0, 0, 0, 1.9872367, 0, 2.7109127, 0)
 mesh = SubResource("ArrayMesh_gp3d3")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="room/bedroom/light_bedroom" unique_id=1606361925]
+[node name="Cylinder_001" type="MeshInstance3D" parent="Room/room/bedroom/light_bedroom" unique_id=1606361925]
 transform = Transform3D(1.5938064, 0, 0, 0, 0.25034606, 0, 0, 0, 1.5787327, 0, 2.6754935, 0)
 mesh = SubResource("ArrayMesh_hjdf2")
 
-[node name="bathroom" type="Node3D" parent="room" unique_id=1172865070]
+[node name="bathroom" type="Node3D" parent="Room/room" unique_id=1172865070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
 
-[node name="floor" type="CSGBox3D" parent="room/bathroom" unique_id=920810755]
+[node name="floor" type="CSGBox3D" parent="Room/room/bathroom" unique_id=920810755]
 transform = Transform3D(-0.7999957, -6.2944366e-08, -3.4774434e-15, 0, -3.1472204e-08, 0.9099997, -6.993816e-08, 0.719996, 3.977726e-08, -569.1785, 1.2658325, 135.96616)
 use_collision = true
 size = Vector3(1052.5537, 1060, 5)
 material = SubResource("StandardMaterial3D_o5lff")
 
-[node name="leftwall" type="CSGBox3D" parent="room/bathroom" unique_id=478246669]
+[node name="leftwall" type="CSGBox3D" parent="Room/room/bathroom" unique_id=478246669]
 transform = Transform3D(-0.8000001, -6.29447e-08, -3.4774465e-15, -2.3316695e-20, -3.1472197e-08, 0.90999985, -6.993822e-08, 0.71999997, 3.977736e-08, -791.0004, 173.81, 2.0000012)
 use_collision = true
 size = Vector3(45, 774, 386)
 material = SubResource("StandardMaterial3D_d1qgf")
 
-[node name="rightwall" type="CSGBox3D" parent="room/bathroom" unique_id=1349542682]
+[node name="rightwall" type="CSGBox3D" parent="Room/room/bathroom" unique_id=1349542682]
 transform = Transform3D(-0.7999997, -6.294502e-08, -3.4774836e-15, -4.878401e-20, -3.1472183e-08, 0.9099997, -6.993821e-08, 0.7199996, 3.9777333e-08, -165.19736, 173.8099, -0.87994844)
 use_collision = true
 size = Vector3(45, 768, 386)
 material = SubResource("StandardMaterial3D_n2p01")
 
-[node name="backwall3" type="CSGBox3D" parent="room/bathroom/rightwall" unique_id=490025063]
+[node name="backwall3" type="CSGBox3D" parent="Room/room/bathroom/rightwall" unique_id=490025063]
 transform = Transform3D(-1, 8.742265e-08, 9.126464e-09, -8.742296e-08, -1, -7.8296225e-08, 9.126463e-09, -7.8296225e-08, 0.9999999, -0.7497711, 542.44446, -3.0517578e-05)
 size = Vector3(47, 316, 386)
 
-[node name="doorwaybathroom" type="CSGBox3D" parent="room/bathroom/rightwall" unique_id=1595557787]
+[node name="doorwaybathroom" type="CSGBox3D" parent="Room/room/bathroom/rightwall" unique_id=1595557787]
 transform = Transform3D(0.9999992, 0, 1.7763551e-15, -1.4210855e-14, 1, -3.1974423e-14, 2.1175824e-21, 0, 0.9999999, 0, -14.513185, -36.000015)
 operation = 2
 size = Vector3(100, 193.87897, 306)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/rightwall" unique_id=1235103268]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/bathroom/rightwall" unique_id=1235103268]
 transform = Transform3D(0.99999845, 0, 1.4901161e-08, 0, 1, 0, 1.21071935e-08, 0, 1, 4.1175175, 4.2163935, 1.2480619)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="backwall" type="CSGBox3D" parent="room/bathroom" unique_id=273618304]
+[node name="backwall" type="CSGBox3D" parent="Room/room/bathroom" unique_id=273618304]
 transform = Transform3D(-2.7975748e-08, 0.8, 3.4969105e-08, 8.305195e-09, -3.9777355e-08, 0.9099998, 0.7199999, 3.8466112e-08, 8.3052365e-09, -681.6902, 173.80998, 266.02618)
 use_collision = true
 size = Vector3(45, 236, 386)
 material = SubResource("StandardMaterial3D_hwy51")
 
-[node name="backwall_shower" type="CSGBox3D" parent="room/bathroom/backwall" unique_id=1565633258]
+[node name="backwall_shower" type="CSGBox3D" parent="Room/room/bathroom/backwall" unique_id=1565633258]
 transform = Transform3D(-4.371156e-08, -1, -2.5458231e-08, 0.9999992, -4.371126e-08, -4.3711406e-08, 4.3711264e-08, -2.5458238e-08, 0.9999999, 160.76141, 92.44458, -6.1035156e-05)
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 size = Vector3(47, 336.75574, 386)
 material = SubResource("StandardMaterial3D_ggd5g")
 
-[node name="showerhandle" type="CSGBox3D" parent="room/bathroom/backwall/backwall_shower" unique_id=691688454]
+[node name="showerhandle" type="CSGBox3D" parent="Room/room/bathroom/backwall/backwall_shower" unique_id=691688454]
 transform = Transform3D(0.70710355, -1.2690256e-08, 0.707108, 7.0000716e-09, 0.99998605, 1.0946531e-08, -0.7070947, -2.7900882e-09, 0.7070976, 22.500183, 9.777771, 147.51389)
 size = Vector3(10, 14, 50)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="room/bathroom/backwall/backwall_shower/showerhandle" unique_id=1408564734]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Room/room/bathroom/backwall/backwall_shower/showerhandle" unique_id=1408564734]
 transform = Transform3D(0.25881734, -2.0648095e-08, 0.9659276, 6.246803e-09, 0.99996734, 1.9706881e-08, -0.9658846, 9.2641983e-10, 0.25881064, 19.7406, 0, 29.976868)
 size = Vector3(10, 14, 50)
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="room/bathroom/backwall/backwall_shower/showerhandle/CSGBox3D2" unique_id=500339024]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Room/room/bathroom/backwall/backwall_shower/showerhandle/CSGBox3D2" unique_id=500339024]
 transform = Transform3D(0.794227, 0.019263355, 0.6073158, -0.6076001, 0.033492163, 0.79354066, -0.00505693, -0.99926007, 0.038305894, 2.662485, 4.255482, 27.834951)
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 radius = 25.0
 height = 4.0
 sides = 64
 
-[node name="backwall2" type="CSGBox3D" parent="room/bathroom/backwall" unique_id=1063359949]
+[node name="backwall2" type="CSGBox3D" parent="Room/room/bathroom/backwall" unique_id=1063359949]
 transform = Transform3D(-1, 8.742265e-08, 9.126474e-09, -8.742197e-08, -1.0000001, -9.65494e-08, 9.126623e-09, -9.654937e-08, 0.9999999, 303.41656, 368.66693, 1.1868286)
 size = Vector3(47, 576, 386)
 
-[node name="ledge" type="CSGBox3D" parent="room/bathroom/backwall" unique_id=370289247]
+[node name="ledge" type="CSGBox3D" parent="Room/room/bathroom/backwall" unique_id=370289247]
 transform = Transform3D(-4.3711367e-08, -0.9999699, -3.4583515e-08, 0.9999995, -4.3710116e-08, -5.2835972e-08, 5.2837954e-08, -3.4582747e-08, 0.99996215, 0.5000305, 377.99908, -180.3561)
 size = Vector3(579, 44, 25)
 
-[node name="frontwall" type="CSGBox3D" parent="room/bathroom" unique_id=691551223]
-transform = Transform3D(-2.7975467e-08, 0.8000001, 3.496911e-08, 8.305196e-09, -3.977736e-08, 0.90999985, 0.71999997, 3.8466137e-08, 8.305287e-09, -465.4001, 173.81001, -260.44025)
+[node name="frontwall" type="CSGBox3D" parent="Room/room/bathroom" unique_id=691551223]
+transform = Transform3D(-2.7975421e-08, 0.79999757, 3.4969105e-08, 8.305193e-09, -3.977726e-08, 0.9099997, 0.7199975, 3.8466098e-08, 8.305287e-09, -465.40005, 173.81, -260.44025)
 use_collision = true
 size = Vector3(45, 770, 386)
 material = SubResource("StandardMaterial3D_5mbv8")
 
-[node name="light" type="Node3D" parent="room/bathroom" unique_id=2099226116]
+[node name="light" type="Node3D" parent="Room/room/bathroom" unique_id=2099226116]
 transform = Transform3D(21.9843, 0, 0, 0, 19.685543, 0, 0, 0, 21.668678, -492.4689, 292.803, 27.141468)
 
-[node name="Light" type="OmniLight3D" parent="room/bathroom/light" unique_id=360350179]
+[node name="Light" type="OmniLight3D" parent="Room/room/bathroom/light" unique_id=360350179]
 transform = Transform3D(0.9999377, -0.0072565344, 0.008511011, 0.007549586, 0.9993621, -0.03490889, -0.008252309, 0.03497097, 0.99935436, -0.078474104, 2.38859, -0.19446477)
 light_energy = 3.492
 omni_range = 4096.0
 omni_attenuation = 2.0
 
-[node name="Cylinder" type="MeshInstance3D" parent="room/bathroom/light" unique_id=1230262923]
+[node name="Cylinder" type="MeshInstance3D" parent="Room/room/bathroom/light" unique_id=1230262923]
 transform = Transform3D(1.9872367, 0, 0, 0, 0.25983432, 0, 0, 0, 1.9872367, 0, 2.7109127, 0)
 mesh = SubResource("ArrayMesh_gp3d3")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="room/bathroom/light" unique_id=1865517626]
+[node name="Cylinder_001" type="MeshInstance3D" parent="Room/room/bathroom/light" unique_id=1865517626]
 transform = Transform3D(1.5938064, 0, 0, 0, 0.25034606, 0, 0, 0, 1.5787327, 0, 2.6754935, 0)
 mesh = SubResource("ArrayMesh_hjdf2")
 
-[node name="doorfixed_living" type="StaticBody3D" parent="room" unique_id=1873790382]
+[node name="doorfixed_living" type="StaticBody3D" parent="Room/room" unique_id=1873790382]
 transform = Transform3D(29.279343, 0, 0.23778757, 0, 32.44056, 0, -0.24529497, 0, 28.383232, -55.555386, 4.054427, -276.9402)
-script = ExtResource("5_tn8bx")
+script = ExtResource("5_trw1n")
 interaction_type = "Animate"
 animation_to_play = "door_open2"
 
-[node name="Cylinder_002" type="MeshInstance3D" parent="room/doorfixed_living" unique_id=1851614456]
+[node name="Cylinder_002" type="MeshInstance3D" parent="Room/room/doorfixed_living" unique_id=1851614456]
 transform = Transform3D(-0.00092523656, -0.00062761083, 0.18481164, 0.19471337, -0.00011225463, 0.00085524406, 0.00090484467, 0.023514299, 0.004936817, 4.4798536, 4.2384677, 1.0237184)
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_mkqmi")
 
-[node name="Cylinder" type="MeshInstance3D" parent="room/doorfixed_living" unique_id=1836617323]
+[node name="Cylinder" type="MeshInstance3D" parent="Room/room/doorfixed_living" unique_id=1836617323]
 transform = Transform3D(-0.00020481562, -0.00058410503, 0.042564098, 0.04310286, -0.000104471634, 0.00019697186, 0.00020029898, 0.021884244, 0.0011370042, 4.554926, 4.239975, 1.0993437)
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_xqu0u")
 
-[node name="door_open2" type="AnimationPlayer" parent="room/doorfixed_living" unique_id=1154775907]
+[node name="door_open2" type="AnimationPlayer" parent="Room/room/doorfixed_living" unique_id=1154775907]
 libraries/ = SubResource("AnimationLibrary_w5kyr")
 
-[node name="mainDoor" type="StaticBody3D" parent="room/doorfixed_living" unique_id=967027690]
+[node name="mainDoor" type="StaticBody3D" parent="Room/room/doorfixed_living" unique_id=967027690]
 
-[node name="Cube" type="MeshInstance3D" parent="room/doorfixed_living/mainDoor" unique_id=1478988103]
+[node name="Cube" type="MeshInstance3D" parent="Room/room/doorfixed_living/mainDoor" unique_id=1478988103]
 transform = Transform3D(-0.0055784425, 2.6969788, -2.3283064e-10, -4.212759, -0.00357128, 0, 0, 0, 0.45393324, 2.6008892, 4.217647, 0.46784306)
 mesh = SubResource("ArrayMesh_x2lnx")
-surface_material_override/0 = SubResource("StandardMaterial3D_tndcu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_living/mainDoor" unique_id=1835101378]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_living/mainDoor" unique_id=1835101378]
 transform = Transform3D(4.2128253, 0, 0, 0, 2.7308493, 0, 0, 0, 0.45346648, 4.2128253, 2.7308493, 0.45346648)
 shape = SubResource("BoxShape3D_e23r4")
 
-[node name="insideHandle" type="StaticBody3D" parent="room/doorfixed_living" unique_id=631002965]
+[node name="insideHandle" type="StaticBody3D" parent="Room/room/doorfixed_living" unique_id=631002965]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("6_6e1c6")
+script = ExtResource("6_57gw7")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="room/doorfixed_living/insideHandle" unique_id=508032945]
+[node name="Cylinder_001" type="MeshInstance3D" parent="Room/room/doorfixed_living/insideHandle" unique_id=508032945]
 transform = Transform3D(0.016266633, 0.00053627323, 0.21616063, 0.2266385, -0.000360867, -0.015497733, 0.0015161134, 0.048190996, -0.0025215042, 4.4836535, 4.2387805, 0.95664406)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_r8vff")
 
-[node name="Cube_001" type="MeshInstance3D" parent="room/doorfixed_living/insideHandle" unique_id=835674500]
+[node name="Cube_001" type="MeshInstance3D" parent="Room/room/doorfixed_living/insideHandle" unique_id=835674500]
 transform = Transform3D(-0.00031476349, -0.011407956, 0.39022267, 0.066241056, -0.0003373847, 0.0015147491, 0.00030781823, 0.060938284, 0.07306005, 4.2216682, 4.2363214, 1.0505409)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_6ke0j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_living/insideHandle" unique_id=196272123]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_living/insideHandle" unique_id=196272123]
 transform = Transform3D(0.9999984, 0, -1.3038516e-08, 0, 1, 0, 1.21071935e-08, 0, 0.9999867, 4.022582, 4.216394, 0.7781153)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="doorfixed_bathroom" type="StaticBody3D" parent="room" unique_id=761847195]
+[node name="doorfixed_bathroom" type="StaticBody3D" parent="Room/room" unique_id=761847195]
 transform = Transform3D(0.24927492, 0, 28.382692, 0, 32.440563, 0, -26.25355, 0, 0.26949096, -120.54065, 4.054427, 56.622402)
-script = ExtResource("5_tn8bx")
+script = ExtResource("5_trw1n")
 interaction_type = "Animate"
 animation_to_play = "door_open"
 
-[node name="door_open" type="AnimationPlayer" parent="room/doorfixed_bathroom" unique_id=638117175]
+[node name="door_open" type="AnimationPlayer" parent="Room/room/doorfixed_bathroom" unique_id=638117175]
 libraries/ = SubResource("AnimationLibrary_o11ua")
 
-[node name="bathroomDoor" type="StaticBody3D" parent="room/doorfixed_bathroom" unique_id=1885445016]
+[node name="bathroomDoor" type="StaticBody3D" parent="Room/room/doorfixed_bathroom" unique_id=1885445016]
 transform = Transform3D(0.956, 0, -8.544247e-09, 0, 1, 0, 8.1683e-09, 0, 1, 0.062082052, 0, -0.0005464554)
 
-[node name="bathroomD" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=210048323]
+[node name="bathroomD" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=210048323]
 transform = Transform3D(-0.005732549, 2.805997, -5.122274e-09, -4.3289957, -0.0037157608, 1.9564229e-12, -5.4569682e-11, 3.9115548e-08, 0.46500006, 2.634119, 4.201361, 0.48682094)
 mesh = SubResource("ArrayMesh_srj15")
-surface_material_override/0 = SubResource("StandardMaterial3D_e6lpx")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6m81")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor/bathroomD" unique_id=84064028]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/bathroomD" unique_id=84064028]
 transform = Transform3D(0.99999845, 0, 1.4901161e-08, 0, 1, 0, 1.21071935e-08, 0, 1, 4.1175175, 4.2163935, 1.2480619)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=673814725]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=673814725]
 transform = Transform3D(4.2123528, 0, -1.4714897e-07, 0, 2.73085, 0, 4.6789646e-06, 0, 0.45346648, 2.6849582, 3.7611177, 0.64147663)
 shape = SubResource("BoxShape3D_tndcu")
 
-[node name="insideHandle" type="StaticBody3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1723868682]
+[node name="insideHandle" type="StaticBody3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=1723868682]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("7_7kgk7")
+script = ExtResource("7_tsbbm")
 
-[node name="Cylinder_003" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=389478320]
+[node name="Cylinder_003" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=389478320]
 transform = Transform3D(0.01917282, -0.00032799668, 0.22596157, -0.22647877, 0.00036189513, 0.017492957, -0.0018199546, -0.04819295, -0.0012741587, 4.6137257, 4.2383623, -0.099946976)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_r8vff")
 
-[node name="Cube_002" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=1631712672]
+[node name="Cube_002" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=1631712672]
 transform = Transform3D(0.0003339052, -0.0069595366, 0.4126978, -0.06624119, 0.0002271066, 0.002082079, -0.00027582457, -0.061724447, -0.039121155, 4.337698, 4.238857, -0.18922567)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_6ke0j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=1283447859]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=1283447859]
 transform = Transform3D(0.99999845, 0, 1.4901161e-08, 0, 1, 0, 1.21071935e-08, 0, 1, 4.1004415, 4.216394, -0.3422656)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="outsideHandle" type="StaticBody3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=737229169]
+[node name="outsideHandle" type="StaticBody3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=737229169]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("8_8hlkx")
+script = ExtResource("8_3mg15")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=866200838]
+[node name="Cylinder_001" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=866200838]
 transform = Transform3D(0.017015304, 0.0005609559, 0.22610946, 0.22663854, -0.000360867, -0.015497734, 0.0015161135, 0.048191007, -0.0025215058, 4.6250744, 4.2387815, 0.9571912)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_r8vff")
 
-[node name="Cube_001" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=1660878991]
+[node name="Cube_001" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=1660878991]
 transform = Transform3D(-0.00027163824, -0.0013150941, 0.41466448, 0.066241056, -0.00033738476, 0.0015147493, 0.00035968138, 0.062081747, 0.0020397173, 4.351102, 4.236323, 1.0577621)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_6ke0j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=260179543]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=260179543]
 transform = Transform3D(0.99999845, 0, 1.4901161e-08, 0, 1, 0, 1.21071935e-08, 0, 1, 4.1175175, 4.2163935, 1.2480619)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle/CollisionShape3D" unique_id=1160050590]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/room/doorfixed_bathroom/bathroomDoor/outsideHandle/CollisionShape3D" unique_id=1160050590]
 transform = Transform3D(0.99999845, 0, 1.4901161e-08, 0, 1, 0, 1.21071935e-08, 0, 1, 4.1175175, 4.2163935, 1.2480619)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1366543024]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=1366543024]
 transform = Transform3D(0.99999845, 0, 1.4901161e-08, 0, 1, 0, 1.21071935e-08, 0, 1, 4.1175175, 4.2163935, 1.2480619)
 shape = SubResource("BoxShape3D_srj15")
 
-[node name="Cylinder_002" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1740233341]
+[node name="Cylinder_002" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=1740233341]
 transform = Transform3D(-0.00096782064, -0.00065649627, 0.19331762, 0.19471338, -0.000112254646, 0.00085524406, 0.00090484484, 0.023514299, 0.004936817, 4.6210995, 4.2384677, 1.0242653)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_mkqmi")
 
-[node name="Cylinder" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1875853195]
+[node name="Cylinder" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom/bathroomDoor" unique_id=1875853195]
 transform = Transform3D(-0.00021424222, -0.0006109883, 0.044523112, 0.043102868, -0.00010447164, 0.0001969719, 0.00020029902, 0.021884244, 0.0011370039, 4.699627, 4.239976, 1.0998902)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_xqu0u")
 
-[node name="Cylinder_004" type="MeshInstance3D" parent="room/doorfixed_bathroom" unique_id=1745160128]
+[node name="Cylinder_004" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom" unique_id=1745160128]
 transform = Transform3D(0.00085672364, -0.0010415153, 0.18469636, -0.19471374, 0.00010454889, 0.0008506457, -0.0009042434, -0.02349965, -0.008182056, 4.467624, 4.2386427, -0.16749144)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_mkqmi")
 
-[node name="Cylinder2" type="MeshInstance3D" parent="room/doorfixed_bathroom" unique_id=2144945666]
+[node name="Cylinder2" type="MeshInstance3D" parent="Room/room/doorfixed_bathroom" unique_id=2144945666]
 transform = Transform3D(0.00018964928, -0.0009693168, 0.042537548, -0.043102935, 9.7300064e-05, 0.00019591264, -0.00020016581, -0.021870602, -0.0018844175, 4.5411434, 4.237691, -0.2444191)
 layers = 3
-material_override = ExtResource("4_se3ai")
+material_override = ExtResource("4_5660y")
 mesh = SubResource("ArrayMesh_xqu0u")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="room" unique_id=1381998835]
+[node name="CSGBox3D" type="CSGBox3D" parent="Room/room" unique_id=1381998835]
 transform = Transform3D(22.296093, 0, 0, 0, 0.9999997, 0, 0, 0, 113.32147, -17.905449, 347.303, 102.77572)
 use_collision = true
 size = Vector3(63.687927, 10.666016, 6.6486206)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2141219323]
+[node name="CSGBox3D" type="CSGBox3D" parent="Room" unique_id=2141219323]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.008992, 0.45957112, 1.5318179)
 use_collision = true
 size = Vector3(1, 0.8988037, 0.84375)
 material = SubResource("StandardMaterial3D_otq2g")
 
-[node name="sink2" parent="." unique_id=2005923826 instance=ExtResource("9_kxqj0")]
+[node name="sink2" parent="Room" unique_id=2005923826 instance=ExtResource("9_k4y7n")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -3.7479506, 0.77128935, -1.5014253)
 
-[node name="Cube" parent="sink2/sink" parent_id_path=PackedInt32Array(2005923826, 419086496) index="0" unique_id=702362573]
+[node name="Cube" parent="Room/sink2/sink" parent_id_path=PackedInt32Array(2005923826, 419086496) index="0" unique_id=702362573]
 surface_material_override/0 = null
 
-[node name="Cylinder" parent="sink2/sink" parent_id_path=PackedInt32Array(2005923826, 419086496) index="1" unique_id=1751679606]
+[node name="Cylinder" parent="Room/sink2/sink" parent_id_path=PackedInt32Array(2005923826, 419086496) index="1" unique_id=1751679606]
 surface_material_override/0 = null
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="sink2" unique_id=1152287275]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44604492, -1.2663574, 0.06840515)
-shape = SubResource("BoxShape3D_io5a2")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/sink2" unique_id=1450268726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06549072, -0.48339844, -0.12225342)
+shape = SubResource("BoxShape3D_xu13d")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137577763]
-environment = SubResource("Environment_e23r4")
-
-[node name="Clock2" type="StaticBody3D" parent="." unique_id=1357888624]
-script = ExtResource("5_tn8bx")
+[node name="Clock2" type="StaticBody3D" parent="Room" unique_id=1357888624]
+script = ExtResource("5_trw1n")
 interaction_type = "Task"
 
-[node name="Clock" type="StaticBody3D" parent="Clock2" unique_id=1430240403]
+[node name="Clock" type="StaticBody3D" parent="Room/Clock2" unique_id=1430240403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("11_btn40")
+script = ExtResource("10_ldg1p")
 
-[node name="Cube" type="MeshInstance3D" parent="Clock2/Clock" unique_id=89867201]
+[node name="Cube" type="MeshInstance3D" parent="Room/Clock2/Clock" unique_id=89867201]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 4.008992, 1.0037059, 1.5318179)
 layers = 2
 mesh = SubResource("ArrayMesh_otq2g")
-surface_material_override/0 = SubResource("StandardMaterial3D_bnng4")
+surface_material_override/0 = SubResource("StandardMaterial3D_uiwhk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Clock2/Clock" unique_id=1717407479]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/Clock2/Clock" unique_id=1717407479]
 transform = Transform3D(1.9565675, 0, 0, 0, 0.16762352, 0, 0, 0, 1, 3.998961, 1.0212212, 1.4528384)
 shape = SubResource("BoxShape3D_otq2g")
 
-[node name="TestObject" type="StaticBody3D" parent="." unique_id=1939645823]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Room" unique_id=137577763]
+environment = SubResource("Environment_e23r4")
+
+[node name="TestObject" type="StaticBody3D" parent="." unique_id=404869303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07842898, 0)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("5_tn8bx")
-interaction_type = "Explode"
+script = ExtResource("5_trw1n")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="TestObject" unique_id=1732479337]
+[node name="StaticBody3D" type="StaticBody3D" parent="TestObject" unique_id=1890105805]
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("12_io5a2")
+script = ExtResource("12_ornpb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TestObject/StaticBody3D" unique_id=1228475759]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestObject/StaticBody3D" unique_id=230359759]
 transform = Transform3D(0.16418812, 0, 0, 0, 0.18950406, 0, 0, 0, 0.15438853, 4.4610386, 0.11616135, -0.0021971688)
 layers = 3
-mesh = SubResource("BoxMesh_rrtow")
-surface_material_override/0 = SubResource("StandardMaterial3D_se3ai")
+mesh = SubResource("BoxMesh_cuu4a")
+surface_material_override/0 = SubResource("StandardMaterial3D_qfmxy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TestObject/StaticBody3D" unique_id=2132929402]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestObject/StaticBody3D" unique_id=1759384561]
 transform = Transform3D(0.16418812, 0, 0, 0, 0.18950406, 0, 0, 0, 0.15438853, 4.4405475, 0.19116777, -0.03394988)
-shape = SubResource("BoxShape3D_tn8bx")
+shape = SubResource("BoxShape3D_l262f")
 
-[editable path="sink2"]
+[editable path="Room/sink2"]

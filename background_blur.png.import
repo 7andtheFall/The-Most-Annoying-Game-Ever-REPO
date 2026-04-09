@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t5qs2xqsvh4a"
-path="res://.godot/imported/InRing.png-ac15236e40975b68bf0fc94353e039ce.ctex"
+uid="uid://dpujjm4kusglc"
+path="res://.godot/imported/background_blur.png-b50cfdac5ebecdae7f7dbb7ba94b8a8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://InRing.png"
-dest_files=["res://.godot/imported/InRing.png-ac15236e40975b68bf0fc94353e039ce.ctex"]
+source_file="res://background_blur.png"
+dest_files=["res://.godot/imported/background_blur.png-b50cfdac5ebecdae7f7dbb7ba94b8a8b.ctex"]
 
 [params]
 

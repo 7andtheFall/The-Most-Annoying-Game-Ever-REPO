@@ -20,6 +20,7 @@ var is_interacting: bool = false      # Are we currently holding E?
 var tasks_completed: int = 0          # The Counter for tasks we need to complete.
 var inventory: Array = []             # The list of collected items/tasks done
 @onready var interaction_bar = $CanvasLayer2/InteractionUI/TextureProgressBar
+@export var end_screen: CanvasLayer
 
 var pitch = 0 # Variable pitch created, pitch determines how much the camera moves precisely instead of the camera doing said math
 
@@ -202,10 +203,15 @@ func execute_interaction(target):
 			print("Error: No AnimationPlayer node found inside " + target.name)
 	
 	elif target.interaction_type == "Explode":
-		# Alex you figure this stuff out
-		# replace the print with the code that links this to the game over screen
-		print("BOOM! Interacted with:", target.item_name)
-		current_hold_time = 0.0 # Timer reset
+		current_hold_time = 0.0
+		
+		interaction_bar.hide()
+		$CanvasLayer2/InteractionUI/InteractionLabel.hide()
+		
+		if end_screen != null:
+			end_screen.trigger_game_over()
+		else:
+			print("Error: End Screen node not assigned in Player Inspector!")
 	
 	elif target.interaction_type == "Task":
 		print("Task Finished:", target.item_name)
