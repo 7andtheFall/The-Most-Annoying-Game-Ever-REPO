@@ -1,19 +1,19 @@
-[gd_scene format=4 uid="uid://ty2bbcb2hlnr"]
+[gd_scene format=4 uid="uid://bxpmq2nwu5gui"]
 
-[ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_aj84e"]
-[ext_resource type="Texture2D" uid="uid://3p74av2eqn74" path="res://IMG_1230.png" id="2_tndcu"]
-[ext_resource type="Script" uid="uid://cwigbsw1je2j8" path="res://glow_script.gd" id="3_bnng4"]
-[ext_resource type="Texture2D" uid="uid://ca58k2amvcheo" path="res://IMG_1231.png" id="3_e23r4"]
-[ext_resource type="PackedScene" uid="uid://d3rqormal7yoa" path="res://sink.tscn" id="4_ocn87"]
-[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_srj15"]
-[ext_resource type="Script" uid="uid://dnh1g33qx3ty0" path="res://main_handle.gd" id="5_e6lpx"]
-[ext_resource type="Texture2D" uid="uid://cbaj74uwfhbwk" path="res://Sky_Anime_03_Day_a.png" id="5_jm8fw"]
-[ext_resource type="Script" uid="uid://b3o8mdvpao6t" path="res://inside_glow.gd" id="5_srj15"]
-[ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="6_asa6l"]
-[ext_resource type="Script" uid="uid://cwkyw2p8hj8v2" path="res://outside_glow.gd" id="6_e6lpx"]
+[ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_1n4hr"]
+[ext_resource type="Texture2D" uid="uid://3p74av2eqn74" path="res://IMG_1230.png" id="2_io5a2"]
+[ext_resource type="Texture2D" uid="uid://ca58k2amvcheo" path="res://IMG_1231.png" id="3_rrtow"]
+[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_se3ai"]
+[ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="5_tn8bx"]
+[ext_resource type="Script" uid="uid://dnh1g33qx3ty0" path="res://main_handle.gd" id="6_6e1c6"]
+[ext_resource type="Script" uid="uid://b3o8mdvpao6t" path="res://inside_glow.gd" id="7_7kgk7"]
+[ext_resource type="Script" uid="uid://cwkyw2p8hj8v2" path="res://outside_glow.gd" id="8_8hlkx"]
+[ext_resource type="PackedScene" uid="uid://d3rqormal7yoa" path="res://sink.tscn" id="9_kxqj0"]
+[ext_resource type="Texture2D" uid="uid://cbaj74uwfhbwk" path="res://Sky_Anime_03_Day_a.png" id="10_epuje"]
+[ext_resource type="Script" uid="uid://cwigbsw1je2j8" path="res://glow_script.gd" id="11_btn40"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k81pi"]
-albedo_texture = ExtResource("2_tndcu")
+albedo_texture = ExtResource("2_io5a2")
 uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb4hf"]
@@ -196,7 +196,7 @@ shadow_mesh = SubResource("ArrayMesh_jewwd")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5lff"]
 blend_mode = 4
 cull_mode = 1
-albedo_texture = ExtResource("3_e23r4")
+albedo_texture = ExtResource("3_rrtow")
 normal_scale = 1.1
 normal_texture = SubResource("CompressedTexture2D_i4t5k")
 uv1_scale = Vector3(5, 5, 5)
@@ -561,11 +561,8 @@ size = Vector3(0.4466257, 3.6878662, 3.947939)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otq2g"]
 albedo_color = Color(0.17501733, 0.06283314, 0.0038685212, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ocn87"]
-size = Vector3(1.9209595, 3.6143188, 2.378357)
-
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x2lnx"]
-panorama = ExtResource("5_jm8fw")
+panorama = ExtResource("10_epuje")
 energy_multiplier = 0.7
 
 [sub_resource type="Sky" id="Sky_tndcu"]
@@ -627,7 +624,7 @@ size = Vector3(0.23291016, 1.6816406, 0.3684082)
 
 [node name="Room" type="Node3D" unique_id=1101723282]
 
-[node name="Player" parent="." unique_id=1436274067 instance=ExtResource("1_aj84e")]
+[node name="Player" parent="." unique_id=1436274067 instance=ExtResource("1_1n4hr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4890759, -0.040685907, -0.3713696)
 
 [node name="room" type="Node3D" parent="." unique_id=1295234776]
@@ -756,7 +753,7 @@ material = SubResource("StandardMaterial3D_hwy51")
 
 [node name="backwall_shower" type="CSGBox3D" parent="room/bathroom/backwall" unique_id=1565633258]
 transform = Transform3D(-4.371156e-08, -1, -2.5458231e-08, 0.9999992, -4.371126e-08, -4.3711406e-08, 4.3711264e-08, -2.5458238e-08, 0.9999999, 160.76141, 92.44458, -6.1035156e-05)
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 size = Vector3(47, 336.75574, 386)
 material = SubResource("StandardMaterial3D_ggd5g")
 
@@ -770,7 +767,7 @@ size = Vector3(10, 14, 50)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="room/bathroom/backwall/backwall_shower/showerhandle/CSGBox3D2" unique_id=500339024]
 transform = Transform3D(0.794227, 0.019263355, 0.6073158, -0.6076001, 0.033492163, 0.79354066, -0.00505693, -0.99926007, 0.038305894, 2.662485, 4.255482, 27.834951)
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 radius = 25.0
 height = 4.0
 sides = 64
@@ -807,18 +804,18 @@ mesh = SubResource("ArrayMesh_hjdf2")
 
 [node name="doorfixed_living" type="StaticBody3D" parent="room" unique_id=1873790382]
 transform = Transform3D(29.279343, 0, 0.23778757, 0, 32.44056, 0, -0.24529497, 0, 28.383232, -55.555386, 4.054427, -276.9402)
-script = ExtResource("6_asa6l")
+script = ExtResource("5_tn8bx")
 interaction_type = "Animate"
 animation_to_play = "door_open2"
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="room/doorfixed_living" unique_id=1851614456]
 transform = Transform3D(-0.00092523656, -0.00062761083, 0.18481164, 0.19471337, -0.00011225463, 0.00085524406, 0.00090484467, 0.023514299, 0.004936817, 4.4798536, 4.2384677, 1.0237184)
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_mkqmi")
 
 [node name="Cylinder" type="MeshInstance3D" parent="room/doorfixed_living" unique_id=1836617323]
 transform = Transform3D(-0.00020481562, -0.00058410503, 0.042564098, 0.04310286, -0.000104471634, 0.00019697186, 0.00020029898, 0.021884244, 0.0011370042, 4.554926, 4.239975, 1.0993437)
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_xqu0u")
 
 [node name="door_open2" type="AnimationPlayer" parent="room/doorfixed_living" unique_id=1154775907]
@@ -838,18 +835,18 @@ shape = SubResource("BoxShape3D_e23r4")
 [node name="insideHandle" type="StaticBody3D" parent="room/doorfixed_living" unique_id=631002965]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("5_e6lpx")
+script = ExtResource("6_6e1c6")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="room/doorfixed_living/insideHandle" unique_id=508032945]
 transform = Transform3D(0.016266633, 0.00053627323, 0.21616063, 0.2266385, -0.000360867, -0.015497733, 0.0015161134, 0.048190996, -0.0025215042, 4.4836535, 4.2387805, 0.95664406)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_r8vff")
 
 [node name="Cube_001" type="MeshInstance3D" parent="room/doorfixed_living/insideHandle" unique_id=835674500]
 transform = Transform3D(-0.00031476349, -0.011407956, 0.39022267, 0.066241056, -0.0003373847, 0.0015147491, 0.00030781823, 0.060938284, 0.07306005, 4.2216682, 4.2363214, 1.0505409)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_6ke0j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_living/insideHandle" unique_id=196272123]
@@ -858,7 +855,7 @@ shape = SubResource("BoxShape3D_srj15")
 
 [node name="doorfixed_bathroom" type="StaticBody3D" parent="room" unique_id=761847195]
 transform = Transform3D(0.24927492, 0, 28.382692, 0, 32.440563, 0, -26.25355, 0, 0.26949096, -120.54065, 4.054427, 56.622402)
-script = ExtResource("6_asa6l")
+script = ExtResource("5_tn8bx")
 interaction_type = "Animate"
 animation_to_play = "door_open"
 
@@ -884,18 +881,18 @@ shape = SubResource("BoxShape3D_tndcu")
 [node name="insideHandle" type="StaticBody3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1723868682]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("5_srj15")
+script = ExtResource("7_7kgk7")
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=389478320]
 transform = Transform3D(0.01917282, -0.00032799668, 0.22596157, -0.22647877, 0.00036189513, 0.017492957, -0.0018199546, -0.04819295, -0.0012741587, 4.6137257, 4.2383623, -0.099946976)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_r8vff")
 
 [node name="Cube_002" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=1631712672]
 transform = Transform3D(0.0003339052, -0.0069595366, 0.4126978, -0.06624119, 0.0002271066, 0.002082079, -0.00027582457, -0.061724447, -0.039121155, 4.337698, 4.238857, -0.18922567)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_6ke0j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor/insideHandle" unique_id=1283447859]
@@ -905,18 +902,18 @@ shape = SubResource("BoxShape3D_srj15")
 [node name="outsideHandle" type="StaticBody3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=737229169]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("6_e6lpx")
+script = ExtResource("8_8hlkx")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=866200838]
 transform = Transform3D(0.017015304, 0.0005609559, 0.22610946, 0.22663854, -0.000360867, -0.015497734, 0.0015161135, 0.048191007, -0.0025215058, 4.6250744, 4.2387815, 0.9571912)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_r8vff")
 
 [node name="Cube_001" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=1660878991]
 transform = Transform3D(-0.00027163824, -0.0013150941, 0.41466448, 0.066241056, -0.00033738476, 0.0015147493, 0.00035968138, 0.062081747, 0.0020397173, 4.351102, 4.236323, 1.0577621)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_6ke0j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_bathroom/bathroomDoor/outsideHandle" unique_id=260179543]
@@ -934,25 +931,25 @@ shape = SubResource("BoxShape3D_srj15")
 [node name="Cylinder_002" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1740233341]
 transform = Transform3D(-0.00096782064, -0.00065649627, 0.19331762, 0.19471338, -0.000112254646, 0.00085524406, 0.00090484484, 0.023514299, 0.004936817, 4.6210995, 4.2384677, 1.0242653)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_mkqmi")
 
 [node name="Cylinder" type="MeshInstance3D" parent="room/doorfixed_bathroom/bathroomDoor" unique_id=1875853195]
 transform = Transform3D(-0.00021424222, -0.0006109883, 0.044523112, 0.043102868, -0.00010447164, 0.0001969719, 0.00020029902, 0.021884244, 0.0011370039, 4.699627, 4.239976, 1.0998902)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_xqu0u")
 
 [node name="Cylinder_004" type="MeshInstance3D" parent="room/doorfixed_bathroom" unique_id=1745160128]
 transform = Transform3D(0.00085672364, -0.0010415153, 0.18469636, -0.19471374, 0.00010454889, 0.0008506457, -0.0009042434, -0.02349965, -0.008182056, 4.467624, 4.2386427, -0.16749144)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_mkqmi")
 
 [node name="Cylinder2" type="MeshInstance3D" parent="room/doorfixed_bathroom" unique_id=2144945666]
 transform = Transform3D(0.00018964928, -0.0009693168, 0.042537548, -0.043102935, 9.7300064e-05, 0.00019591264, -0.00020016581, -0.021870602, -0.0018844175, 4.5411434, 4.237691, -0.2444191)
 layers = 3
-material_override = ExtResource("4_srj15")
+material_override = ExtResource("4_se3ai")
 mesh = SubResource("ArrayMesh_xqu0u")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="room" unique_id=1381998835]
@@ -966,7 +963,7 @@ use_collision = true
 size = Vector3(1, 0.8988037, 0.84375)
 material = SubResource("StandardMaterial3D_otq2g")
 
-[node name="sink2" parent="." unique_id=2005923826 instance=ExtResource("4_ocn87")]
+[node name="sink2" parent="." unique_id=2005923826 instance=ExtResource("9_kxqj0")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -3.7479506, 0.77128935, -1.5014253)
 
 [node name="Cube" parent="sink2/sink" parent_id_path=PackedInt32Array(2005923826, 419086496) index="0" unique_id=702362573]
@@ -975,24 +972,18 @@ surface_material_override/0 = null
 [node name="Cylinder" parent="sink2/sink" parent_id_path=PackedInt32Array(2005923826, 419086496) index="1" unique_id=1751679606]
 surface_material_override/0 = null
 
-[node name="StaticBody3D" type="StaticBody3D" parent="sink2" unique_id=1607801911]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="sink2/StaticBody3D" unique_id=2056753952]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32857895, 0.50979614, 0.68917847)
-shape = SubResource("BoxShape3D_ocn87")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137577763]
 environment = SubResource("Environment_e23r4")
 
 [node name="Clock2" type="StaticBody3D" parent="." unique_id=1357888624]
-script = ExtResource("6_asa6l")
+script = ExtResource("5_tn8bx")
 interaction_type = "Task"
 
 [node name="Clock" type="StaticBody3D" parent="Clock2" unique_id=1430240403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("3_bnng4")
+script = ExtResource("11_btn40")
 
 [node name="Cube" type="MeshInstance3D" parent="Clock2/Clock" unique_id=89867201]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 4.008992, 1.0037059, 1.5318179)

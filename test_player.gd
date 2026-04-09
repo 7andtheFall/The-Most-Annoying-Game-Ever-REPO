@@ -14,6 +14,13 @@ var target_col_h = 1.0 # The target collision box height we want when crouching
 var target_col_y = .5 # The target collision position we want when crouching
 
 
+# Interaction Variables
+var current_hold_time: float = 0.0    # Tracks seconds held
+var is_interacting: bool = false      # Are we currently holding E?
+var tasks_completed: int = 0          # The Counter for tasks we need to complete.
+var inventory: Array = []             # The list of collected items/tasks done
+@onready var interaction_bar = $CanvasLayer2/InteractionUI/TextureProgressBar
+
 var pitch = 0 # Variable pitch created, pitch determines how much the camera moves precisely instead of the camera doing said math
 
 # Camera Controlls
@@ -106,25 +113,107 @@ func _physics_process(delta): # Multiplication by delta keeps things constant re
 			
 	move_and_slide() # Moves the player while handling collisions, used at end to ensure every key input is rendered with this
 	
-	handle_glow()# We put this here so it the glow check script runs over and over
+	handle_glow(delta)# We put this here so it the glow check script runs over and over
 
-func handle_glow(): # Function that handles items glowing when player looks at them
+func handle_glow(delta):
+	if interact_check.is_colliding():
+		var hit_collider = interact_check.get_collider()
 		
-		if interact_check.is_colliding(): # If the raycast3d is colliding with an object on layer 2
-			var current_object = interact_check.get_collider() # Finds what object the player is interacting with interact_check and returns that into the variable
-			
-			if current_object != hovered_object: # If the object we just looked at is not the same as the old object we looked at
-				if hovered_object != null: # Then the old object is deleted from the mememory
-					hovered_object.toggle_glow(false) # The old object stops glowing
-			
-				if current_object.has_method("toggle_glow"): # If the object in layer 2 we are looking at has the function toggle_glow proceed if not ignore/prevents game crashes
-					current_object.toggle_glow(true) # Make the object we are looking at now glow
-					hovered_object = current_object # Now our current object is equal to the object we are looking at
-				
+		var glow_target = hit_collider 
+		
+		var data_target = hit_collider
+		while data_target != null and not data_target is Interactable:
+			data_target = data_target.get_parent()
+
+		# --- THE FIX: Cast the data_target to the Interactable class ---
+		var interactable_data = data_target as Interactable
+
+		if glow_target != hovered_object:
+			if hovered_object != null:
+				hovered_object.toggle_glow(false)
+		
+			if glow_target.has_method("toggle_glow"):
+				if interactable_data != null and interactable_data.is_completed == false:
+					glow_target.toggle_glow(true)
+					hovered_object = glow_target
 				else:
-					hovered_object = null # If the object doesnt have the script do nothing
+					hovered_object = null
+		
+		# We check interactable_data now instead of data_target
+		if interactable_data != null and interactable_data.is_completed == false:
+			interaction_bar.show()
+			$CanvasLayer2/InteractionUI/InteractionLabel.show()
+			
+			if Input.is_key_pressed(KEY_E):
+				current_hold_time += delta
+				# Access variables through the casted 'interactable_data'
+				interaction_bar.value = (current_hold_time / interactable_data.interaction_time) * 100
 				
+				if current_hold_time >= interactable_data.interaction_time:
+					execute_interaction(interactable_data)
+					current_hold_time = 0.0
+			else:
+				current_hold_time = 0.0
+				interaction_bar.value = 0
 		else:
-			if hovered_object != null: # Check if we were actually looking at something before
-				hovered_object.toggle_glow(false) # Then turn of the glow of the previous object we were looking at
-				hovered_object = null # The object we were looking at is not true
+			# Hide UI if object is already completed or not interactable
+			interaction_bar.hide()
+			$CanvasLayer2/InteractionUI/InteractionLabel.hide()
+				
+	else:
+		# If raycast hits nothing, turn off glow and hide UI
+		if hovered_object != null:
+			hovered_object.toggle_glow(false)
+			hovered_object = null
+		
+		interaction_bar.hide()
+		$CanvasLayer2/InteractionUI/InteractionLabel.hide()
+		current_hold_time = 0.0
+
+func execute_interaction(target):
+	target.is_completed = true
+	
+	if hovered_object != null:
+		hovered_object.toggle_glow(false)
+		hovered_object = null
+	
+	if target.interaction_type == "Collect":
+		inventory.append(target.item_name)
+		print("Pickedf up:", target.item_name)
+		target.queue_free() #Makes it dissapear
+		hovered_object = null
+		tasks_completed += 1
+		check_win_condition()
+	
+	elif target.interaction_type == "Animate":
+		var anim_player = null
+		
+		for child in target.get_children():
+			if child is AnimationPlayer:
+				anim_player = child
+				break
+
+		if anim_player != null:
+			anim_player.play(target.animation_to_play)
+			
+			tasks_completed += 1
+			check_win_condition()
+		else:
+			print("Error: No AnimationPlayer node found inside " + target.name)
+	
+	elif target.interaction_type == "Explode":
+		# Alex you figure this stuff out
+		# replace the print with the code that links this to the game over screen
+		print("BOOM! Interacted with:", target.item_name)
+		current_hold_time = 0.0 # Timer reset
+	
+	elif target.interaction_type == "Task":
+		print("Task Finished:", target.item_name)
+		tasks_completed += 1
+		check_win_condition()
+		
+				
+				
+func check_win_condition():
+	if tasks_completed >= 8:
+		print("You win!")	

@@ -75,6 +75,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2xf2b")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ab20"]
+albedo_color = Color(0.4, 0.4, 0.3254902, 1)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_7qpq8"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
@@ -108,6 +111,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7qpq8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f0hj"]
+albedo_color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghd4g"]
 
@@ -397,10 +403,12 @@ mesh = SubResource("ArrayMesh_j5ihq")
 [node name="Cube" type="MeshInstance3D" parent="sink" unique_id=702362573]
 transform = Transform3D(1.7096019, 0, 0, 0, 1, 0, 0, 0, 1.5547484, -0.6181313, -0.5895685, 0)
 mesh = SubResource("ArrayMesh_tq6eq")
+surface_material_override/0 = SubResource("StandardMaterial3D_1ab20")
 
 [node name="Cylinder" type="MeshInstance3D" parent="sink" unique_id=1751679606]
 transform = Transform3D(1.0936441, 0, 0, 0, 0.24135113, 0, 0, 0, 1.0622746, -0.1171082, 0.18691611, 0.011109218)
 mesh = SubResource("ArrayMesh_6bdpj")
+surface_material_override/0 = SubResource("StandardMaterial3D_0f0hj")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="sink/Cylinder" unique_id=1159637678]
 transform = Transform3D(0.782337, 0, 0, 0, 1.0920972, 0, 0, 0, 0.8395022, 0.11114913, 0.3184622, -0.005680988)
