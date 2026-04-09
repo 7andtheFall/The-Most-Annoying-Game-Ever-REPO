@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bavdqejolsp0r"]
+
+[ext_resource type="PackedScene" uid="uid://6v7v0uh04oxy" path="res://idontneedadegreetobeaclothinghanger.blend" id="1_re2um"]
+[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="2_ydd72"]
+
+[node name="idontneedadegreetobeaclothinghanger" unique_id=819048750 instance=ExtResource("1_re2um")]
+
+[node name="Light" parent="." index="0" unique_id=1873071904]
+visible = false
+
+[node name="Camera" parent="." index="1" unique_id=730603974]
+visible = false
+
+[node name="Cylinder" parent="." index="2" unique_id=2031342030]
+transform = Transform3D(0.026809277, 0, 0, 0, 0.00050266227, -0.018984336, 0, 0.9999137, 9.5435325e-06, 0.75641847, 1.4196782, -1.2969954)
+surface_material_override/0 = ExtResource("2_ydd72")

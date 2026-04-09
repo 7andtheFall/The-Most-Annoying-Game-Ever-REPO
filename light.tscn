@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://kt8xq0if8mbc"]
+
+[ext_resource type="PackedScene" uid="uid://c7p2wyrg0vpf3" path="res://light.blend" id="1_hdgcg"]
+
+[node name="light" unique_id=213680297 instance=ExtResource("1_hdgcg")]
+
+[node name="Light" parent="." index="0" unique_id=1254342324]
+transform = Transform3D(0.9999377, -0.0072565344, 0.008511011, 0.007549586, 0.9993621, -0.03490889, -0.008252309, 0.03497097, 0.99935436, -0.078474104, 2.38859, -0.19446477)
