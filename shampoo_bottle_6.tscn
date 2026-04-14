@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4ampmmmc1m5q"]
+
+[ext_resource type="PackedScene" uid="uid://c5y45745bhhph" path="res://ShampooBottle6.blend" id="1_ppled"]
+
+[node name="ShampooBottle6" unique_id=596382405 instance=ExtResource("1_ppled")]
+
+[node name="Light" parent="." index="0" unique_id=378121726]
+visible = false
+
+[node name="Camera" parent="." index="1" unique_id=1085259838]
+visible = false
