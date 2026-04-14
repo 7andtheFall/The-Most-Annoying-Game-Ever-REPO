@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://d28bk8xtieoar"]
+
+[ext_resource type="Script" uid="uid://b06qy8jilhcaa" path="res://test_player.gd" id="1_5ywas"]
+[ext_resource type="Script" uid="uid://bm5vdhrtyko2" path="res://canvas_layer.gd" id="2_6723c"]
+[ext_resource type="Script" uid="uid://deueelb8fe0eb" path="res://play_bounce.gd" id="3_15xqs"]
+[ext_resource type="Texture2D" uid="uid://dgr2mumeju5yt" path="res://OutRing.png" id="3_xaimq"]
+[ext_resource type="Texture2D" uid="uid://t5qs2xqsvh4a" path="res://InRing.png" id="4_15xqs"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m2ypr"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ewwqw"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1436274067 node_paths=PackedStringArray("end_screen")]
+floor_snap_length = 0.0
+script = ExtResource("1_5ywas")
+end_screen = NodePath("CanvasLayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1181927525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.011438, 0)
+shape = SubResource("CapsuleShape3D_m2ypr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=535582896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_ewwqw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=623991660]
+transform = Transform3D(1.0000002, 4.656613e-09, 1.6391277e-07, -1.9376378e-10, 0.99987465, -0.015829507, -1.7881393e-07, 0.015829504, 0.9998746, 0, 1.697244, 0)
+current = true
+
+[node name="InteractCheck" type="RayCast3D" parent="Camera3D" unique_id=303463239]
+transform = Transform3D(0.995, -3.571528e-07, 7.521555e-15, 0, -8.8821544e-08, -0.979, 1.7488536e-07, 2.032, -4.279345e-08, 4.5403777e-08, -0.0040193796, -0.2538846)
+collision_mask = 2
+
+[node name="CrouchCheck" type="RayCast3D" parent="." unique_id=318611466]
+transform = Transform3D(0.99999994, 0, 0, 0, -1.8588628, 8.742277e-08, 0, -1.6250694e-07, -0.99999994, 0, 0.15017164, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=862840442]
+process_mode = 3
+script = ExtResource("2_6723c")
+
+[node name="quit_button2" type="Button" parent="CanvasLayer" unique_id=1116061009]
+offset_left = 836.0
+offset_top = 613.0
+offset_right = 1125.0
+offset_bottom = 709.0
+theme_override_font_sizes/font_size = 64
+text = "QUIT"
+script = ExtResource("3_15xqs")
+
+[node name="retry_button2" type="Button" parent="CanvasLayer" unique_id=324493744]
+offset_left = 836.0
+offset_top = 371.0
+offset_right = 1125.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 64
+text = "RETRY"
+script = ExtResource("3_15xqs")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=874340972]
+
+[node name="InteractionUI" type="Control" parent="CanvasLayer2" unique_id=1883102074]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer2/InteractionUI" unique_id=1860852262]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 523.0
+offset_right = 1443.0
+offset_bottom = 1023.0
+scale = Vector2(0.18, 0.18)
+fill_mode = 4
+texture_under = ExtResource("3_xaimq")
+texture_progress = ExtResource("4_15xqs")
+
+[node name="InteractionLabel" type="Label" parent="CanvasLayer2/InteractionUI" unique_id=955866986]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 969.99994
+offset_top = 541.0
+offset_right = 1009.99994
+offset_bottom = 596.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.86, 0.86)
+theme_override_font_sizes/font_size = 40
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/quit_button2" to="CanvasLayer" method="_on_quit_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/retry_button2" to="CanvasLayer" method="_on_retry_button_2_pressed"]

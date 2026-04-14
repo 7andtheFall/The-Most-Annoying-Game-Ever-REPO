@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://7a40p0hpg6cq"]
+[gd_scene format=4 uid="uid://b8vjwh1ep420a"]
 
-[ext_resource type="PackedScene" uid="uid://b3wnx5kw22qvf" path="res://shirt.blend" id="1_1t0mk"]
-[ext_resource type="Material" uid="uid://btxjsjeynbbnp" path="res://shirt1.material" id="2_xd5b5"]
+[ext_resource type="PackedScene" uid="uid://c1ih4r5y5y15m" path="res://shirt.blend" id="1_1t0mk"]
+[ext_resource type="Material" path="res://shirt1.material" id="2_xd5b5"]
 [ext_resource type="Texture2D" uid="uid://dr0rwwymnsyid" path="res://woodtext.jpg" id="3_vaofu"]
 [ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_egvpd"]
 
@@ -69,20 +69,20 @@ shadow_mesh = SubResource("ArrayMesh_iqvq1")
 [node name="shirt2" unique_id=79593310 instance=ExtResource("1_1t0mk")]
 transform = Transform3D(-0.0015882684, 0.9999464, -0.010227402, 2.910383e-11, -0.010227416, -0.99994767, -0.99999875, -0.0015881852, 1.6243765e-05, 0, 0, 0)
 
-[node name="Light" parent="." index="0" unique_id=142048990]
+[node name="Light" parent="." index="0" unique_id=1037494598]
 visible = false
 
-[node name="Camera" parent="." index="1" unique_id=1901557466]
+[node name="Camera" parent="." index="1" unique_id=1032231596]
 visible = false
 
-[node name="shirt" parent="." index="2" unique_id=1664797536]
+[node name="shirt" parent="." index="2" unique_id=62043007]
 surface_material_override/0 = ExtResource("2_xd5b5")
 
-[node name="shirt_001" parent="." index="3" unique_id=1406246598]
+[node name="shirt_001" parent="." index="3" unique_id=1622345230]
 transform = Transform3D(-1, 0.0001745671, 0, -0.0001745671, -1, 0, 0, 0, 1, 0.0061834306, -0.038841642, -0.0037878733)
 surface_material_override/0 = ExtResource("2_xd5b5")
 
-[node name="hangerbase" parent="." index="4" unique_id=1256040096]
+[node name="hangerbase" parent="." index="4" unique_id=949400697]
 surface_material_override/0 = SubResource("StandardMaterial3D_aumcl")
 surface_material_override/1 = ExtResource("4_egvpd")
 
@@ -92,5 +92,5 @@ mesh = SubResource("ArrayMesh_3mdwa")
 surface_material_override/0 = SubResource("StandardMaterial3D_aumcl")
 surface_material_override/1 = ExtResource("4_egvpd")
 
-[node name="Empty" parent="." index="5" unique_id=1238816439]
+[node name="Empty" parent="." index="5" unique_id=873230379]
 visible = false

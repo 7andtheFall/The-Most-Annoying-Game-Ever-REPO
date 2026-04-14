@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://pu3ll25kpqry"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_batsu"]
+transparency = 1
+albedo_color = Color(0.7607843, 1, 1, 0.08627451)
+roughness = 0.1
+refraction_scale = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pb30p"]
+albedo_color = Color(0.019607844, 0.07058824, 0.16862746, 1)
+metallic = 0.55
+
+[node name="window2" type="Node3D" unique_id=1722375288]
+transform = Transform3D(-0.000824233, -1.2675654e-08, -1.3888906, -1.2500017, -4.803408e-08, 0.00074182125, -5.4631776e-08, 1.0988917, 1.2708203e-08, 0, 0, 0)
+
+[node name="NEwwinder" type="CSGBox3D" parent="." unique_id=576836660]
+transform = Transform3D(-0.9999967, -1.4828216e-10, -0.0019374235, 0, 1.0000086, 4.656652e-09, 0.0019374248, -4.6565187e-09, -0.9999966, 1.1008911, -0.284729, 3.8541565)
+size = Vector3(139.23474, 164.62025, 1)
+material = SubResource("StandardMaterial3D_batsu")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1138683214]
+transform = Transform3D(1, 0, 5.820766e-11, 0, 1, 0, -5.820766e-11, 0, 1, 0, 0, 0)
+size = Vector3(136.91602, 161.84619, 10)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" unique_id=923972879]
+operation = 2
+size = Vector3(130, 155, 10)
+material = SubResource("StandardMaterial3D_pb30p")

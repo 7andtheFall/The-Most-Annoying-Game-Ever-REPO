@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dlch4buukysrk"]
+
+[ext_resource type="ArrayMesh" path="res://raindrop.res" id="1_s0d3e"]
+
+[sub_resource type="Curve" id="Curve_4umay"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5169811), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_mpqro"]
+_data = [Vector2(0, 0.509434), 0.0, 0.0, 0, 0, Vector2(0.9864865, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_uuc7f"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_hwy51"]
+curve_x = SubResource("Curve_4umay")
+curve_y = SubResource("Curve_mpqro")
+curve_z = SubResource("Curve_uuc7f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r0ydb"]
+lifetime_randomness = 0.31
+emission_shape = 1
+emission_sphere_radius = 25.0
+angle_min = -720.0
+angle_max = -720.0
+directional_velocity_min = -1.6093254e-05
+directional_velocity_max = 2.9999838
+directional_velocity_curve = SubResource("CurveXYZTexture_hwy51")
+scale_min = 0.01
+scale_max = 0.03
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[node name="shower_water" type="Node3D" unique_id=88427692]
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="." unique_id=1371390811]
+transform = Transform3D(0.9999996, -1.1368684e-13, 4.6322114e-22, 0, 0.99994785, 0, -4.910144e-20, -1.2576606e-12, 1, -30.965855, 0.7278986, -79.649124)
+size = Vector3(178.20313, 7.040409, 575.43)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="GPUParticlesCollisionBox3D" unique_id=405446221]
+transform = Transform3D(0.624575, 0, 0.78096485, 0, 1, 0, -0.78096485, 0, 0.624575, 0, 0, 0)
+emitting = false
+amount = 400
+lifetime = 0.7
+process_material = SubResource("ParticleProcessMaterial_r0ydb")
+draw_pass_1 = ExtResource("1_s0d3e")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://crb83ysg3h4ei"]
+
+[ext_resource type="PackedScene" uid="uid://d2ji0a1sa8vll" path="res://ToothBrush (1).blend" id="1_62utl"]
+
+[node name="ToothBrush (1)" unique_id=1122408248 instance=ExtResource("1_62utl")]
+
+[node name="Light" parent="." index="0" unique_id=1041452091]
+visible = false
+
+[node name="Camera" parent="." index="1" unique_id=1104490188]
+visible = false
