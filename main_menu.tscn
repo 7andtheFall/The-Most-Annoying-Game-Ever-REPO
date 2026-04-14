@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bnylpg25rt0j7"]
+
+[ext_resource type="Script" uid="uid://k1h41b6jcgj5" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://dpujjm4kusglc" path="res://background_blur.png" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://deueelb8fe0eb" path="res://play_bounce.gd" id="3_fu7sn"]
+
+[node name="MainMenu" type="Control" unique_id=1478516991]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1919.0
+offset_bottom = -1079.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=881071839]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_7vrkn")
+
+[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=1634910165]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 350.0
+offset_right = 1117.0
+offset_bottom = 733.0
+theme_override_constants/separation = 25
+
+[node name="PlayButton" type="Button" parent="MenuButtons" unique_id=2043003451]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "PLAY"
+script = ExtResource("3_fu7sn")
+
+[node name="OptionsButton" type="Button" parent="MenuButtons" unique_id=1984647691]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "OPTIONS"
+script = ExtResource("3_fu7sn")
+
+[node name="QuitButton" type="Button" parent="MenuButtons" unique_id=1824657038]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "QUIT"
+script = ExtResource("3_fu7sn")
+
+[node name="OptionsPanel" type="Panel" parent="." unique_id=1211047565]
+visible = false
+layout_mode = 0
+offset_left = 531.0
+offset_top = 156.0
+offset_right = 1407.0
+offset_bottom = 907.0
+
+[node name="HSlider" type="HSlider" parent="OptionsPanel" unique_id=2117479144]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 180.0
+offset_right = 363.0
+offset_bottom = 215.0
+
+[node name="HSlider2" type="HSlider" parent="OptionsPanel" unique_id=197393046]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 286.0
+offset_right = 364.0
+offset_bottom = 321.0
+
+[node name="Back_Button" type="Button" parent="OptionsPanel" unique_id=807064828]
+layout_mode = 0
+offset_right = 121.0
+offset_bottom = 34.0
+text = "BACK"
+
+[node name="Label" type="Label" parent="OptionsPanel" unique_id=245094582]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 140.0
+offset_right = 128.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 24
+text = "VOLUME"
+
+[node name="Label2" type="Label" parent="OptionsPanel" unique_id=1635619378]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 246.0
+offset_right = 164.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 24
+text = "SENSITIVITY"
+
+[connection signal="pressed" from="MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuButtons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="OptionsPanel/Back_Button" to="." method="_on_back_button_pressed"]

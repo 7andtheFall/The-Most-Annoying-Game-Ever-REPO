@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://drdvw5q6jw4by"]
+
+[ext_resource type="PackedScene" uid="uid://bxpmq2nwu5gui" path="res://everything.tscn" id="1_2sw64"]
+[ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="2_xu13d"]
+[ext_resource type="Script" uid="uid://cev6pqcfsrg25" path="res://dissapear_glow.gd" id="3_u3icf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xu13d"]
+size = Vector3(2.3082275, 1.9667969, 2.5802002)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cuu4a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfmxy"]
+albedo_color = Color(0.14705655, 0.09103928, 0.021058232, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l262f"]
+size = Vector3(3.2087402, 1.7724609, 3.5093994)
+
+[node name="MAINGAME" type="Node3D" unique_id=120281920]
+
+[node name="Room" parent="." unique_id=1101723282 instance=ExtResource("1_2sw64")]
+
+[node name="frontwall" parent="Room/room/bathroom" parent_id_path=PackedInt32Array(1101723282, 1172865070) index="4" unique_id=691551223]
+transform = Transform3D(-2.7975421e-08, 0.79999757, 3.4969105e-08, 8.305193e-09, -3.977726e-08, 0.9099997, 0.7199975, 3.8466098e-08, 8.305287e-09, -465.40005, 173.81, -260.44025)
+
+[node name="Cube" parent="Room/room/doorfixed_living/mainDoor" parent_id_path=PackedInt32Array(1101723282, 967027690) index="0" unique_id=1478988103]
+surface_material_override/0 = null
+
+[node name="bathroomD" parent="Room/room/doorfixed_bathroom/bathroomDoor" parent_id_path=PackedInt32Array(1101723282, 1885445016) index="0" unique_id=210048323]
+surface_material_override/0 = null
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Room/sink2" parent_id_path=PackedInt32Array(1101723282, 2005923826) index="3" unique_id=1450268726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06549072, -0.48339844, -0.12225342)
+shape = SubResource("BoxShape3D_xu13d")
+
+[node name="Cube" parent="Room/Clock2/Clock" parent_id_path=PackedInt32Array(1101723282, 1430240403) index="0" unique_id=89867201]
+surface_material_override/0 = null
+
+[node name="TestObject" parent="Room" index="6" unique_id=1939645823]
+interaction_type = "Explode"
+
+[node name="TestObject" type="StaticBody3D" parent="." unique_id=404869303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07842898, 0)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_xu13d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TestObject" unique_id=1890105805]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_u3icf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestObject/StaticBody3D" unique_id=230359759]
+transform = Transform3D(0.16418812, 0, 0, 0, 0.18950406, 0, 0, 0, 0.15438853, 4.4610386, 0.11616135, -0.0021971688)
+layers = 3
+mesh = SubResource("BoxMesh_cuu4a")
+surface_material_override/0 = SubResource("StandardMaterial3D_qfmxy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestObject/StaticBody3D" unique_id=1759384561]
+transform = Transform3D(0.16418812, 0, 0, 0, 0.18950406, 0, 0, 0, 0.15438853, 4.4405475, 0.19116777, -0.03394988)
+shape = SubResource("BoxShape3D_l262f")
+
+[editable path="Room"]
+[editable path="Room/sink2"]
