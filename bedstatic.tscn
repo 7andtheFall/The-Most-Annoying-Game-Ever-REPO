@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://d5jwsnwxh37p"]
+[gd_scene format=3 uid="uid://vryo8cmvyx0o"]
 
-[ext_resource type="PackedScene" uid="uid://5moljup5npf6" path="res://bedstatic.blend" id="1_juhii"]
-[ext_resource type="Material" uid="uid://bup8rnryxbnnh" path="res://wood1.tres" id="2_5tjvq"]
-[ext_resource type="Material" uid="uid://bqtj0jblyhq87" path="res://quilt.tres" id="3_catja"]
+[ext_resource type="PackedScene" uid="uid://4yaqmmt065t7" path="res://bedstatic.blend" id="1_juhii"]
+[ext_resource type="Material" path="res://wood1.tres" id="2_5tjvq"]
+[ext_resource type="Material" path="res://quilt.tres" id="3_catja"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5tjvq"]
+size = Vector3(2.0238037, 5.137024, 2.1650085)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5hpl"]
 albedo_color = Color(0.65851796, 0.31367204, 0.061137542, 1)
@@ -18,62 +21,69 @@ albedo_color = Color(0.9882353, 0.20784314, 0.105882354, 1)
 
 [node name="bedstatic" unique_id=1602118962 instance=ExtResource("1_juhii")]
 
-[node name="bed_frame" parent="." index="0" unique_id=165431183]
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0" unique_id=1106030853]
+transform = Transform3D(1.2999996, 0, 0, 0, 0.39616972, 0, 0, 0, 2, 0.008489989, 0.9483529, 0.13946533)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=311663325]
+transform = Transform3D(0.9999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082977295, -0.064437866)
+shape = SubResource("BoxShape3D_5tjvq")
+
+[node name="bed_frame" parent="." index="1" unique_id=1295565061]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="Cube_001" parent="bed_frame" index="0" unique_id=601975862]
+[node name="Cube_001" parent="bed_frame" index="0" unique_id=970791574]
 visible = false
 
-[node name="Cube_002" parent="bed_frame" index="1" unique_id=124202646]
+[node name="Cube_002" parent="bed_frame" index="1" unique_id=756882201]
 visible = false
 
-[node name="Light" parent="." index="1" unique_id=732641890]
+[node name="Light" parent="." index="2" unique_id=1000107412]
 visible = false
 
-[node name="Camera" parent="." index="2" unique_id=161987156]
+[node name="Camera" parent="." index="3" unique_id=2005679724]
 visible = false
 
-[node name="headboard" parent="." index="4" unique_id=552100403]
+[node name="headboard" parent="." index="5" unique_id=703263490]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="Cube" parent="headboard" index="0" unique_id=999480432]
+[node name="Cube" parent="headboard" index="0" unique_id=804188652]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="Cube_003" parent="headboard" index="1" unique_id=217241214]
+[node name="Cube_003" parent="headboard" index="1" unique_id=1820895752]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="Cube_004" parent="headboard" index="2" unique_id=674975643]
+[node name="Cube_004" parent="headboard" index="2" unique_id=549194124]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="Cube_005" parent="headboard" index="3" unique_id=591218290]
+[node name="Cube_005" parent="headboard" index="3" unique_id=1429259105]
 visible = false
 
-[node name="Cube_006" parent="headboard" index="4" unique_id=2139693449]
+[node name="Cube_006" parent="headboard" index="4" unique_id=459034880]
 visible = false
 
-[node name="Cube_007" parent="headboard" index="5" unique_id=1517764359]
+[node name="Cube_007" parent="headboard" index="5" unique_id=1833452363]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="Cube_008" parent="headboard" index="6" unique_id=542554648]
+[node name="Cube_008" parent="headboard" index="6" unique_id=880906773]
 surface_material_override/0 = ExtResource("2_5tjvq")
 
-[node name="blanket1" parent="." index="5" unique_id=1269055747]
+[node name="blanket1" parent="." index="6" unique_id=302158221]
 surface_material_override/0 = ExtResource("3_catja")
 
-[node name="big_pillows" parent="." index="6" unique_id=846953384]
+[node name="big_pillows" parent="." index="7" unique_id=381282960]
 surface_material_override/0 = SubResource("StandardMaterial3D_l5hpl")
 
-[node name="Cube_010" parent="big_pillows" index="0" unique_id=1032234844]
+[node name="Cube_010" parent="big_pillows" index="0" unique_id=888073002]
 surface_material_override/0 = SubResource("StandardMaterial3D_525wq")
 
-[node name="medium_pillows" parent="." index="7" unique_id=1858459523]
+[node name="medium_pillows" parent="." index="8" unique_id=582177335]
 surface_material_override/0 = ExtResource("3_catja")
 
-[node name="big_pillows_002" parent="medium_pillows" index="0" unique_id=2056966684]
+[node name="big_pillows_002" parent="medium_pillows" index="0" unique_id=389667843]
 surface_material_override/0 = ExtResource("3_catja")
 
-[node name="small_pillows" parent="." index="8" unique_id=465689555]
+[node name="small_pillows" parent="." index="9" unique_id=316798844]
 surface_material_override/0 = SubResource("StandardMaterial3D_kbr8i")
 
-[node name="big_pillows_003" parent="small_pillows" index="0" unique_id=1724516819]
+[node name="big_pillows_003" parent="small_pillows" index="0" unique_id=1611627626]
 surface_material_override/0 = SubResource("StandardMaterial3D_pcow7")
