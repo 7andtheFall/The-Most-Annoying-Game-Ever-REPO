@@ -50,8 +50,39 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node3D" type="Node3D" unique_id=1094028594]
+[sub_resource type="GDScript" id="GDScript_cx0sx"]
+resource_name = "explodecode"
+script/source = "extends AnimatedSprite3D
+
+var explosionTriggered: bool = true
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	visible = false
+	frame = 0
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if explosionTriggered == true:
+		explode()
+		set_process(false)
+		
+func explode():
+		visible = true
+		play(\"EXPLODE\")
+		await get_tree().create_timer(1.0).timeout
+		play(\"default\")
+		explosionTriggered = false
+			
+"
+
+[node name="explosion" type="Node3D" unique_id=1094028594]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=990383648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4315634, 0)
 sprite_frames = SubResource("SpriteFrames_nygno")
 animation = &"EXPLODE"
+script = SubResource("GDScript_cx0sx")
+
+[node name="Camera3D" type="Camera3D" parent="AnimatedSprite3D" unique_id=2066497999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9061012, -0.07725906, 6.88862)
