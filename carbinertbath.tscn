@@ -1,6 +1,9 @@
-[gd_scene format=4 uid="uid://bge3r0hve3rmd"]
+[gd_scene format=4 uid="uid://8flwb1e4yhmj"]
 
 [ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="1_m6gh7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6gh7"]
+size = Vector3(0.63061523, 1.1294556, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1q60"]
 resource_name = "Material.003"
@@ -433,8 +436,16 @@ shape = 0
 
 [node name="carbinertbath" type="Node3D" unique_id=2139234721]
 
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=658386139]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -2.3283064e-10, 0, 2.3283064e-10, 1.0000001, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2018175453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0045166016, 0.5555115, 0)
+shape = SubResource("BoxShape3D_m6gh7")
+
 [node name="carbinert" type="CSGBox3D" parent="." unique_id=281695871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008857727, 0.55767894, 0)
+use_collision = true
 size = Vector3(0.6, 1.1, 1)
 
 [node name="hole" type="CSGBox3D" parent="carbinert" unique_id=1321260063]

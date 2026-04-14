@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c0edu6fq80xbt"]
+
+[ext_resource type="PackedScene" uid="uid://dr3oyeoi6ku60" path="res://Desk1.blend" id="1_se7ci"]
+[ext_resource type="Material" path="res://wood1.tres" id="2_tm3w8"]
+[ext_resource type="Material" uid="uid://diarglcjxde7w" path="res://wood2.tres" id="3_r8wvv"]
+[ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_tm3w8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tm3w8"]
+size = Vector3(2.175293, 2.0202637, 2.0915527)
+
+[node name="Desk1" unique_id=971857856 instance=ExtResource("1_se7ci")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0" unique_id=91743057]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=812716054]
+transform = Transform3D(11.5, 0, 0, 0, 15, 0, 0, 0, 22, 0.30041504, 15.075082, -0.07788086)
+shape = SubResource("BoxShape3D_tm3w8")
+
+[node name="Desk" parent="." index="1" unique_id=1687131629]
+surface_material_override/0 = ExtResource("2_tm3w8")
+
+[node name="Light" parent="." index="2" unique_id=528355999]
+visible = false
+
+[node name="Camera" parent="." index="3" unique_id=1259082766]
+visible = false
+
+[node name="Drawer_001" parent="." index="4" unique_id=550142231]
+surface_material_override/0 = ExtResource("3_r8wvv")
+
+[node name="handle" type="CSGBox3D" parent="Drawer_001" index="0" unique_id=51505746]
+transform = Transform3D(-3.9987266, -0.10093885, 0, 0.10093869, -3.9987252, 0, 0, 0, 4, 1.1545844, 0.21187592, -0.044642925)
+size = Vector3(0.025390625, 0.055419922, 0.17883301)
+material = ExtResource("4_tm3w8")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Drawer_001/handle" index="0" unique_id=1580575708]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.022849202, 0.0031023622, 0.07572266)
+size = Vector3(0.026367188, 0.047576904, 0.042053223)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Drawer_001/handle" index="1" unique_id=699022122]
+transform = Transform3D(-0.00488689, 0, 0.9999881, 0, 1, 0, -0.9999881, 0, -0.00488689, 0.02211225, 0.0009980798, -0.07507227)
+size = Vector3(0.025390625, 0.051940918, 0.042053223)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="5" unique_id=228060032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2446289, 29.720522, -0.2447815)
+size = Vector3(24.950195, 1, 45.888245)
+material = ExtResource("3_r8wvv")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" index="0" unique_id=1604468298]
+transform = Transform3D(0.0008726874, 0.9998857, -0.015096518, 0, 0.015096524, 0.99988604, 0.99999964, -0.0008725879, 1.31745455e-05, -9.504259, -14.773306, 7.773208)
+size = Vector3(26.399414, 1, 29.630775)
+material = ExtResource("3_r8wvv")

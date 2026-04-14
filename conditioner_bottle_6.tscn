@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cisdb0mihom8p"]
+
+[ext_resource type="PackedScene" uid="uid://c41mvoeewpsfy" path="res://ConditionerBottle6.blend" id="1_fbpg4"]
+
+[node name="ConditionerBottle6" unique_id=1926190161 instance=ExtResource("1_fbpg4")]
+
+[node name="Light" parent="." index="0" unique_id=600822523]
+visible = false
+
+[node name="Camera" parent="." index="1" unique_id=1875150929]
+visible = false
