@@ -54,25 +54,15 @@ animations = [{
 resource_name = "explodecode"
 script/source = "extends AnimatedSprite3D
 
-var explosionTriggered: bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
 	frame = 0
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if explosionTriggered == true:
-		explode()
-		set_process(false)
 		
 func explode():
-		visible = true
 		play(\"EXPLODE\")
 		await get_tree().create_timer(1.0).timeout
 		play(\"default\")
-		explosionTriggered = false
 			
 "
 
