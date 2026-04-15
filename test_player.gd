@@ -21,6 +21,7 @@ var tasks_completed: int = 0          # The Counter for tasks we need to complet
 var inventory: Array = []             # The list of collected items/tasks done
 @onready var interaction_bar = $CanvasLayer2/InteractionUI/TextureProgressBar
 @export var end_screen: CanvasLayer
+@onready var explode = $Ending/Explode
 
 var pitch = 0 # Variable pitch created, pitch determines how much the camera moves precisely instead of the camera doing said math
 
@@ -28,7 +29,7 @@ var pitch = 0 # Variable pitch created, pitch determines how much the camera mov
 
 func _ready():# Allow us to use ready function, letting us hide the mouse from the player while keeping it centered 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # Hides the mouse
-	
+	explode.visible = false
 	
 func _input(event): #allows for us to log if the player moves the mouse
 	
@@ -207,6 +208,10 @@ func execute_interaction(target):
 		
 		interaction_bar.hide()
 		$CanvasLayer2/InteractionUI/InteractionLabel.hide()
+		
+		explode.visible = true
+		await get_tree().create_timer(1.0).timeout
+		explode.visible = false
 		
 		if end_screen != null:
 			end_screen.trigger_game_over()
