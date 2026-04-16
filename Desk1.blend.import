@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgm388748g3fj"
-path="res://.godot/imported/idontneedadegreetobeaclothinghanger.blend-fa4293a409a72334f67b777232d1b8ef.scn"
+uid="uid://dr3oyeoi6ku60"
+path="res://.godot/imported/Desk1.blend-27cdc6f9b8bf24f6c38e4ca16b738755.scn"
 
 [deps]
 
-source_file="res://idontneedadegreetobeaclothinghanger.blend"
-dest_files=["res://.godot/imported/idontneedadegreetobeaclothinghanger.blend-fa4293a409a72334f67b777232d1b8ef.scn"]
+source_file="res://Desk1.blend"
+dest_files=["res://.godot/imported/Desk1.blend-27cdc6f9b8bf24f6c38e4ca16b738755.scn"]
 
 [params]
 
