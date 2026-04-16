@@ -4,11 +4,61 @@
 [ext_resource type="Script" uid="uid://bm5vdhrtyko2" path="res://canvas_layer.gd" id="2_6723c"]
 [ext_resource type="Script" uid="uid://deueelb8fe0eb" path="res://play_bounce.gd" id="3_15xqs"]
 [ext_resource type="Texture2D" uid="uid://dgr2mumeju5yt" path="res://OutRing.png" id="3_xaimq"]
-[ext_resource type="Texture2D" uid="uid://t5qs2xqsvh4a" path="res://InRing.png" id="4_15xqs"]
+[ext_resource type="Texture2D" uid="uid://cfglstx1u22uy" path="res://InRing.png" id="4_15xqs"]
+[ext_resource type="Texture2D" uid="uid://dyu6cs14gmgmw" path="res://explode/IMG_1326.png" id="6_f4277"]
+[ext_resource type="Texture2D" uid="uid://dd4fkyworcmv7" path="res://explode/IMG_1327.png" id="7_fdwjt"]
+[ext_resource type="Texture2D" uid="uid://c4t6wyoaib6ri" path="res://explode/IMG_1328.png" id="8_y6jth"]
+[ext_resource type="Texture2D" uid="uid://d0dhj0bxvpasl" path="res://explode/IMG_1329.png" id="9_jcoop"]
+[ext_resource type="Texture2D" uid="uid://c3xfjua2daewg" path="res://explode/IMG_1330.png" id="10_2vm8s"]
+[ext_resource type="Texture2D" uid="uid://d1sh4eehb3324" path="res://explode/IMG_1331.png" id="11_0y32g"]
+[ext_resource type="Texture2D" uid="uid://b40i6k5v7trso" path="res://explode/IMG_1332.png" id="12_t0fek"]
+[ext_resource type="Texture2D" uid="uid://sl23bbvfrqtu" path="res://explode/IMG_1333.png" id="13_56cgk"]
+[ext_resource type="Texture2D" uid="uid://deexmnrnudmmk" path="res://explode/IMG_1334.png" id="14_6gpkh"]
+[ext_resource type="Script" uid="uid://bfdig5avsqpnt" path="res://canvas_layer_3.gd" id="15_fdwjt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m2ypr"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ewwqw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kmmv4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_f4277")
+}, {
+"duration": 0.9,
+"texture": ExtResource("7_fdwjt")
+}, {
+"duration": 0.8,
+"texture": ExtResource("8_y6jth")
+}, {
+"duration": 0.7,
+"texture": ExtResource("9_jcoop")
+}, {
+"duration": 0.6,
+"texture": ExtResource("10_2vm8s")
+}, {
+"duration": 0.7,
+"texture": ExtResource("11_0y32g")
+}, {
+"duration": 0.8,
+"texture": ExtResource("12_t0fek")
+}, {
+"duration": 0.9,
+"texture": ExtResource("13_56cgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6gpkh")
+}],
+"loop": true,
+"name": &"EXPLODE",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody3D" unique_id=1436274067 node_paths=PackedStringArray("end_screen")]
 floor_snap_length = 0.0
@@ -30,6 +80,14 @@ current = true
 [node name="InteractCheck" type="RayCast3D" parent="Camera3D" unique_id=303463239]
 transform = Transform3D(0.995, -3.571528e-07, 7.521555e-15, 0, -8.8821544e-08, -0.979, 1.7488536e-07, 2.032, -4.279345e-08, 4.5403777e-08, -0.0040193796, -0.2538846)
 collision_mask = 2
+
+[node name="Ending" type="Node3D" parent="Camera3D" unique_id=215303046]
+transform = Transform3D(0.0764188, -1.9428903e-16, -9.947598e-14, -1.3877788e-17, 0.08449791, 5.5879354e-09, 5.3290705e-15, -9.313226e-10, 1.0255055, 1.1218377e-07, -0.07845843, -0.53426266)
+
+[node name="Explode" type="AnimatedSprite3D" parent="Camera3D/Ending" unique_id=1147158861]
+transform = Transform3D(1, 2.220446e-16, 0, 0, 1, 0, 8.881784e-16, 0, 1, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_kmmv4")
+animation = &"EXPLODE"
 
 [node name="CrouchCheck" type="RayCast3D" parent="." unique_id=318611466]
 transform = Transform3D(0.99999994, 0, 0, 0, -1.8588628, 8.742277e-08, 0, -1.6250694e-07, -0.99999994, 0, 0.15017164, 0)
@@ -90,5 +148,31 @@ text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1846178510]
+process_mode = 3
+script = ExtResource("15_fdwjt")
+
+[node name="restart_button" type="Button" parent="CanvasLayer3" unique_id=2055970289]
+offset_left = 839.0
+offset_top = 216.0
+offset_right = 1131.0
+offset_bottom = 332.0
+theme_override_font_sizes/font_size = 64
+action_mode = 0
+text = "RESTART"
+script = ExtResource("3_15xqs")
+
+[node name="return_to_menu_button" type="Button" parent="CanvasLayer3" unique_id=1104424151]
+offset_left = 608.0
+offset_top = 750.0
+offset_right = 1367.0
+offset_bottom = 926.0
+theme_override_font_sizes/font_size = 64
+action_mode = 0
+text = "RETURN TO MAIN MENU"
+script = ExtResource("3_15xqs")
+
 [connection signal="pressed" from="CanvasLayer/quit_button2" to="CanvasLayer" method="_on_quit_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/retry_button2" to="CanvasLayer" method="_on_retry_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer3/restart_button" to="CanvasLayer3" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer3/return_to_menu_button" to="CanvasLayer3" method="_on_return_to_menu_button_pressed"]
