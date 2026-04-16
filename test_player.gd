@@ -1,5 +1,6 @@
 extends CharacterBody3D # Allows us to use the physics node for CharacterBody3D
 
+@onready var win_screen=$CanvasLayer3
 @onready var camera = $Camera3D # onready makes the script wait until whole scene is loaded, $ means look for children node named Camera3D
 @onready var collision = $CollisionShape3D # allows us to use the collision shape child object of player
 @onready var ceiling_check = $CrouchCheck #Allows us to use the child object of player which is raycast3d and we rename it ceiling_check
@@ -21,7 +22,7 @@ var tasks_completed: int = 0          # The Counter for tasks we need to complet
 var inventory: Array = []             # The list of collected items/tasks done
 @onready var interaction_bar = $CanvasLayer2/InteractionUI/TextureProgressBar
 @export var end_screen: CanvasLayer
-@onready var explode = $Ending/Explode
+@onready var explode = $Camera3D/Ending/Explode
 
 var pitch = 0 # Variable pitch created, pitch determines how much the camera moves precisely instead of the camera doing said math
 
@@ -198,7 +199,6 @@ func execute_interaction(target):
 		if anim_player != null:
 			anim_player.play(target.animation_to_play)
 			
-			tasks_completed += 1
 			check_win_condition()
 		else:
 			print("Error: No AnimationPlayer node found inside " + target.name)
@@ -226,5 +226,12 @@ func execute_interaction(target):
 				
 				
 func check_win_condition():
-	if tasks_completed >= 8:
-		print("You win!")	
+	if tasks_completed >= 1  :
+		get_tree().paused = true
+		interaction_bar.hide()
+		$CanvasLayer2/InteractionUI/InteractionLabel.hide()
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		if win_screen != null:
+			win_screen.trigger_win_screen()
+		else:
+			print("Error: End Screen node not assigned in Player Inspector!")

@@ -1,65 +1,8 @@
 [gd_scene format=3 uid="uid://b33jmgjp7tpvi"]
 
 [ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://dyu6cs14gmgmw" path="res://explode/IMG_1326.png" id="2_nvl01"]
-[ext_resource type="Texture2D" uid="uid://dd4fkyworcmv7" path="res://explode/IMG_1327.png" id="3_ivps1"]
-[ext_resource type="Texture2D" uid="uid://c4t6wyoaib6ri" path="res://explode/IMG_1328.png" id="4_urp6f"]
-[ext_resource type="Texture2D" uid="uid://d0dhj0bxvpasl" path="res://explode/IMG_1329.png" id="5_bwjto"]
-[ext_resource type="Texture2D" uid="uid://c3xfjua2daewg" path="res://explode/IMG_1330.png" id="6_606se"]
-[ext_resource type="Texture2D" uid="uid://d1sh4eehb3324" path="res://explode/IMG_1331.png" id="7_u1c27"]
-[ext_resource type="Texture2D" uid="uid://b40i6k5v7trso" path="res://explode/IMG_1332.png" id="8_op7ga"]
-[ext_resource type="Texture2D" uid="uid://sl23bbvfrqtu" path="res://explode/IMG_1333.png" id="9_q13i1"]
-[ext_resource type="Texture2D" uid="uid://deexmnrnudmmk" path="res://explode/IMG_1334.png" id="10_pylmc"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5tmop"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_nvl01")
-}, {
-"duration": 0.9,
-"texture": ExtResource("3_ivps1")
-}, {
-"duration": 0.8,
-"texture": ExtResource("4_urp6f")
-}, {
-"duration": 0.7,
-"texture": ExtResource("5_bwjto")
-}, {
-"duration": 0.6,
-"texture": ExtResource("6_606se")
-}, {
-"duration": 0.7,
-"texture": ExtResource("7_u1c27")
-}, {
-"duration": 0.8,
-"texture": ExtResource("8_op7ga")
-}, {
-"duration": 0.9,
-"texture": ExtResource("9_q13i1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_pylmc")
-}],
-"loop": true,
-"name": &"EXPLODE",
-"speed": 10.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Player" unique_id=1436274067 instance=ExtResource("1_4flbx")]
 
 [node name="Camera3D" parent="." index="2" unique_id=623991660]
 transform = Transform3D(1, 3.0242746e-09, 1.7878841e-07, -1.9376374e-10, 0.9998747, -0.015829505, -1.7881389e-07, 0.015829505, 0.9998747, 0, 1.6276609, 0)
-
-[node name="Ending" type="Node3D" parent="." index="6" unique_id=1865641785]
-transform = Transform3D(0.0764188, 2.5554456e-10, 1.8334842e-07, -1.4807279e-11, 0.08448733, -0.01623324, -1.3664739e-08, 0.0013375593, 1.025377, 1.6426519e-08, 1.6272525, -0.53543764)
-
-[node name="Explode" type="AnimatedSprite3D" parent="Ending" index="0" unique_id=1939142548]
-transform = Transform3D(1, 2.220446e-16, 0, 0, 1, 0, 8.881784e-16, 0, 1, 0, 0, 0)
-sprite_frames = SubResource("SpriteFrames_5tmop")
-animation = &"EXPLODE"

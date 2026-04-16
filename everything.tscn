@@ -1,27 +1,27 @@
 [gd_scene format=4 uid="uid://bxpmq2nwu5gui"]
 
 [ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_1n4hr"]
-[ext_resource type="Texture2D" uid="uid://3p74av2eqn74" path="res://IMG_1230.png" id="2_io5a2"]
-[ext_resource type="Texture2D" uid="uid://ca58k2amvcheo" path="res://IMG_1231.png" id="3_rrtow"]
-[ext_resource type="PackedScene" path="res://rack.tscn" id="3_tn8bx"]
+[ext_resource type="Texture2D" uid="uid://dr6unfbqaffp7" path="res://IMG_1230.png" id="2_io5a2"]
+[ext_resource type="Texture2D" uid="uid://b5m23mj386t1f" path="res://IMG_1231.png" id="3_rrtow"]
+[ext_resource type="PackedScene" uid="uid://bavdqejolsp0r" path="res://rack.tscn" id="3_tn8bx"]
 [ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="4_se3ai"]
-[ext_resource type="PackedScene" path="res://carbinert.tscn" id="4_tn8bx"]
+[ext_resource type="PackedScene" uid="uid://5xil3wyjgcqk" path="res://carbinert.tscn" id="4_tn8bx"]
 [ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="5_tn8bx"]
 [ext_resource type="Script" uid="uid://dnh1g33qx3ty0" path="res://main_handle.gd" id="6_6e1c6"]
-[ext_resource type="Material" path="res://shirt1.material" id="6_irt4o"]
+[ext_resource type="Material" uid="uid://btxjsjeynbbnp" path="res://shirt1.material" id="6_irt4o"]
 [ext_resource type="Script" uid="uid://b3o8mdvpao6t" path="res://inside_glow.gd" id="7_7kgk7"]
-[ext_resource type="Texture2D" uid="uid://dr0rwwymnsyid" path="res://woodtext.jpg" id="7_bqt3s"]
+[ext_resource type="Texture2D" uid="uid://bfddp7marx7lt" path="res://woodtext.jpg" id="7_bqt3s"]
 [ext_resource type="Script" uid="uid://cwkyw2p8hj8v2" path="res://outside_glow.gd" id="8_8hlkx"]
-[ext_resource type="Texture2D" uid="uid://cbaj74uwfhbwk" path="res://Sky_Anime_03_Day_a.png" id="10_epuje"]
+[ext_resource type="Texture2D" uid="uid://t04vjkh2l6i3" path="res://Sky_Anime_03_Day_a.png" id="10_epuje"]
 [ext_resource type="PackedScene" uid="uid://pu3ll25kpqry" path="res://window_2.tscn" id="11_6p17m"]
 [ext_resource type="Script" uid="uid://cwigbsw1je2j8" path="res://glow_script.gd" id="11_btn40"]
-[ext_resource type="Material" path="res://wood1.tres" id="11_clf10"]
-[ext_resource type="Material" path="res://quilt.tres" id="12_bqt3s"]
+[ext_resource type="Material" uid="uid://bup8rnryxbnnh" path="res://wood1.tres" id="11_clf10"]
+[ext_resource type="Material" uid="uid://bqtj0jblyhq87" path="res://quilt.tres" id="12_bqt3s"]
 [ext_resource type="PackedScene" uid="uid://c0edu6fq80xbt" path="res://desk.tscn" id="12_clf10"]
 [ext_resource type="Material" uid="uid://dhn351hmv721v" path="res://shirt2.tres" id="12_irt4o"]
 [ext_resource type="Material" uid="uid://c2rw77eeh56wj" path="res://shirt3.tres" id="13_bqt3s"]
 [ext_resource type="PackedScene" uid="uid://8flwb1e4yhmj" path="res://carbinertbath.tscn" id="14_mxkm5"]
-[ext_resource type="ArrayMesh" path="res://raindrop.res" id="17_lhwyw"]
+[ext_resource type="ArrayMesh" uid="uid://colmxhtcapvj6" path="res://raindrop.res" id="17_lhwyw"]
 [ext_resource type="Texture2D" uid="uid://b4o1hlxe45iah" path="res://20260413_162920.jpg" id="22_lhwyw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k81pi"]
@@ -942,6 +942,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jewwd")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eix0s"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eh8x1"]
 resource_name = "Material"
 cull_mode = 2
@@ -1455,6 +1457,9 @@ shadow_mesh = SubResource("ArrayMesh_h6tuy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjips"]
 albedo_color = Color(0.9882353, 0.20784314, 0.105882354, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e802i"]
+size = Vector3(1.8398438, 2.4813232, 2.0084229)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4t5k"]
 
@@ -2459,6 +2464,9 @@ shadow_mesh = SubResource("ArrayMesh_ty11d")
 height = 69.14691
 radius = 47.691895
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_lhwyw"]
+size = Vector3(393.36063, 1, 123.46826)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trm5t"]
 resource_name = "silver.metal"
 cull_mode = 2
@@ -3142,6 +3150,8 @@ transform = Transform3D(0.0039094603, 1.3915971e-21, 3.9999983, 1.4103416e-21, 4
 
 [node name="bed_interact" type="StaticBody3D" parent="room/bedroom" unique_id=302920428]
 transform = Transform3D(-103.99997, 2.2371256e-20, 0.0837949, 7.3409475e-20, 31.69357, -5.282424e-23, -0.05446667, 6.7762636e-21, -159.99995, 548.37946, 30.763342, -71.743835)
+disable_mode = 1
+physics_material_override = SubResource("PhysicsMaterial_eix0s")
 script = ExtResource("5_tn8bx")
 interaction_type = "Explode"
 item_name = "Bed"
@@ -3225,11 +3235,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0367334, -0.057985246, 0.15
 mesh = SubResource("ArrayMesh_7byqc")
 surface_material_override/0 = SubResource("StandardMaterial3D_jjips")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bedroom/bed_interact" unique_id=1392609789]
+transform = Transform3D(1, 0, 4.656613e-10, -4.718142e-28, 0.99999976, 3.2873313e-29, 5.820766e-11, -5.293956e-23, 1, 0.0036578178, 0.7406613, 0.06585699)
+shape = SubResource("BoxShape3D_e802i")
+
 [node name="bathroom" type="Node3D" parent="room" unique_id=1172865070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
 
 [node name="floor" type="CSGBox3D" parent="room/bathroom" unique_id=920810755]
-transform = Transform3D(-0.7999957, -6.2944366e-08, -3.4774434e-15, 0, -3.1472204e-08, 0.9099997, -6.993816e-08, 0.719996, 3.977726e-08, -569.1785, 1.2658325, 135.96616)
+transform = Transform3D(-0.79999566, -6.2944366e-08, -3.4774434e-15, 0, -3.1472204e-08, 0.9099997, -6.993816e-08, 0.7199959, 3.977726e-08, -569.1276, 1.0620244, 136.13618)
 use_collision = true
 size = Vector3(1052.5537, 1060, 5)
 material = SubResource("StandardMaterial3D_o5lff")
@@ -3305,7 +3319,7 @@ collision_mask = 2
 script = ExtResource("11_btn40")
 
 [node name="handle" type="MeshInstance3D" parent="room/bathroom/backwall/backwall_shower/showerhead/shower_handle_interact/shower_handle_glow" unique_id=1681096454]
-transform = Transform3D(87.091125, 11.321909, 37.569954, -2.838506, 65.0728, -23.618958, -49.06196, 16.332987, 68.05786, 1175.5078, 261.9331, -1022.7261)
+transform = Transform3D(87.091125, 11.321909, 37.569954, -2.8385062, 65.0728, -23.618958, -49.061962, 16.332987, 68.05786, 1175.5078, 261.9331, -1022.7261)
 mesh = SubResource("ArrayMesh_be8th")
 
 [node name="Cube_001" type="MeshInstance3D" parent="room/bathroom/backwall/backwall_shower/showerhead/shower_handle_interact/shower_handle_glow/handle" unique_id=487158578]
@@ -3519,6 +3533,11 @@ mesh = SubResource("ArrayMesh_mwyry")
 transform = Transform3D(0.999988, 0, 1.7763568e-15, 0, 0.999988, 0, 0, 0, 0.99999976, -669.8958, 35.47967, -135.68431)
 shape = SubResource("CylinderShape3D_clf10")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/toilet" unique_id=1054293328]
+transform = Transform3D(0.39024368, 0, 2.4424907e-15, 0, 0.68101054, 0, 0, 0, 0.43434986, -699.0118, 70.34292, -141.39098)
+shape = SubResource("BoxShape3D_lhwyw")
+debug_color = Color(0.9081254, 0.30108178, 0, 0.41960785)
+
 [node name="doorfixed_living" type="StaticBody3D" parent="room" unique_id=1873790382]
 transform = Transform3D(29.279343, 0, 0.23778757, 0, 32.44056, 0, -0.24529497, 0, 28.383232, -55.555386, 4.054427, -276.9402)
 script = ExtResource("5_tn8bx")
@@ -3703,3 +3722,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bnng4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clock2/Clock" unique_id=1717407479]
 transform = Transform3D(1.9565675, 0, 0, 0, 0.16762352, 0, 0, 0, 1, 3.998961, 1.0212212, 1.4528384)
 shape = SubResource("BoxShape3D_otq2g")
+
+[editable path="Player"]
