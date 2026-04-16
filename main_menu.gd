@@ -1,9 +1,14 @@
+class_name MainMenu
 extends Control
 
 
-@export var game_scene_path: String = "res://everything.tscn"
+@export var game_scene_path: String = "res://everything_jayden.tscn"
 @onready var menu_buttons = $MenuButtons
 @onready var options_panel = $OptionsPanel
+
+
+
+static var chosen_sensitivity: float = 0.0014
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,3 +49,20 @@ func _on_back_button_pressed() -> void:
 	
 	tween.set_parallel(false)
 	tween.tween_callback(options_panel.hide)
+
+
+func _on_h_slider_value_changed(value: float) -> void:
+	# value is usually 0.0 to 1.0 (if you set that in the slider inspector)
+	# AudioServer needs decibels. linear_to_db converts 0-1 to proper volume levels.
+	var bus_index = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
+	
+	# Mute if the slider is at the bottom
+	AudioServer.set_bus_mute(bus_index, value < 0.05)
+	
+
+
+
+func _on_h_slider_2_value_changed(value: float) -> void:
+	var scaled = value * .35
+	ProjectSettings.set_setting("game/sensitivity", scaled)

@@ -4,13 +4,92 @@
 [ext_resource type="Script" uid="uid://bm5vdhrtyko2" path="res://canvas_layer.gd" id="2_6723c"]
 [ext_resource type="Script" uid="uid://deueelb8fe0eb" path="res://play_bounce.gd" id="3_15xqs"]
 [ext_resource type="Texture2D" uid="uid://dgr2mumeju5yt" path="res://OutRing.png" id="3_xaimq"]
-[ext_resource type="Texture2D" uid="uid://t5qs2xqsvh4a" path="res://InRing.png" id="4_15xqs"]
+[ext_resource type="Texture2D" uid="uid://cfglstx1u22uy" path="res://InRing.png" id="4_15xqs"]
+[ext_resource type="Script" uid="uid://c8c3hibn8825j" path="res://explosion.gd" id="6_fdwjt"]
+[ext_resource type="Texture2D" uid="uid://dyu6cs14gmgmw" path="res://explode/IMG_1326.png" id="7_y6jth"]
+[ext_resource type="Texture2D" uid="uid://dd4fkyworcmv7" path="res://explode/IMG_1327.png" id="8_jcoop"]
+[ext_resource type="Texture2D" uid="uid://c4t6wyoaib6ri" path="res://explode/IMG_1328.png" id="9_2vm8s"]
+[ext_resource type="Texture2D" uid="uid://d0dhj0bxvpasl" path="res://explode/IMG_1329.png" id="10_0y32g"]
+[ext_resource type="Texture2D" uid="uid://c3xfjua2daewg" path="res://explode/IMG_1330.png" id="11_t0fek"]
+[ext_resource type="Texture2D" uid="uid://d1sh4eehb3324" path="res://explode/IMG_1331.png" id="12_56cgk"]
+[ext_resource type="Texture2D" uid="uid://b40i6k5v7trso" path="res://explode/IMG_1332.png" id="13_6gpkh"]
+[ext_resource type="Texture2D" uid="uid://sl23bbvfrqtu" path="res://explode/IMG_1333.png" id="14_kmmv4"]
+[ext_resource type="Texture2D" uid="uid://deexmnrnudmmk" path="res://explode/IMG_1334.png" id="15_1k238"]
+[ext_resource type="AudioStream" uid="uid://euiepap0vn66" path="res://ExplosionSFX.mp3" id="16_y6jth"]
+[ext_resource type="Script" uid="uid://b0bh6ap4x3ksi" path="res://win.gd" id="17_jcoop"]
+[ext_resource type="AudioStream" uid="uid://c3er4ghp6li6s" path="res://WinSFX.mp3" id="18_2vm8s"]
+[ext_resource type="AudioStream" uid="uid://w4f64sh8tunu" path="res://GameSFX.mp3" id="19_0y32g"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m2ypr"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ewwqw"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_s88eb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_y6jth")
+}, {
+"duration": 0.9,
+"texture": ExtResource("8_jcoop")
+}, {
+"duration": 0.8,
+"texture": ExtResource("9_2vm8s")
+}, {
+"duration": 0.7,
+"texture": ExtResource("10_0y32g")
+}, {
+"duration": 0.6,
+"texture": ExtResource("11_t0fek")
+}, {
+"duration": 0.7,
+"texture": ExtResource("12_56cgk")
+}, {
+"duration": 0.8,
+"texture": ExtResource("13_6gpkh")
+}, {
+"duration": 0.9,
+"texture": ExtResource("14_kmmv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1k238")
+}],
+"loop": true,
+"name": &"EXPLODE",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_0y32g"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.006666667, 0.2, 0.4, 0.6066667, 0.8066667, 1)
+colors = PackedColorArray(0.5181527, 0.1976887, 0.92485493, 1, 0.23306257, 0.6227796, 0.9800984, 1, 0.4551208, 0.92372066, 0.5482743, 1, 0.91323256, 0.30135974, 0.6127786, 1, 0.99215686, 0.9098039, 0.3019608, 1, 0.9803285, 0.42432708, 0.6566072, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t0fek"]
+gradient = SubResource("Gradient_0y32g")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_56cgk"]
+direction = Vector3(1, 1, -1)
+initial_velocity_min = 4.0
+initial_velocity_max = 8.0
+color_ramp = SubResource("GradientTexture1D_t0fek")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6gpkh"]
+no_depth_test = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_kmmv4"]
+material = SubResource("StandardMaterial3D_6gpkh")
+size = Vector2(0.05, 0.1)
+
 [node name="Player" type="CharacterBody3D" unique_id=1436274067 node_paths=PackedStringArray("end_screen")]
+process_mode = 3
 floor_snap_length = 0.0
 script = ExtResource("1_5ywas")
 end_screen = NodePath("CanvasLayer")
@@ -31,6 +110,27 @@ current = true
 transform = Transform3D(0.995, -3.571528e-07, 7.521555e-15, 0, -8.8821544e-08, -0.979, 1.7488536e-07, 2.032, -4.279345e-08, 4.5403777e-08, -0.0040193796, -0.2538846)
 collision_mask = 2
 
+[node name="Ending" type="Node3D" parent="Camera3D" unique_id=1661466454]
+transform = Transform3D(0.08856669, -3.0531133e-16, -1.1368684e-13, -2.7755576e-17, 0.10868598, 5.5879354e-09, 8.881784e-15, -1.3969839e-09, 1.020858, 1.1216983e-07, -0.006315589, -0.5354048)
+
+[node name="Explode" type="AnimatedSprite3D" parent="Camera3D/Ending" unique_id=1853038588]
+transform = Transform3D(1.2535927, -4.440892e-16, -4.5474735e-13, 1.110223e-15, 1.4888135, 1.4901161e-08, 5.3290705e-15, -2.3283064e-10, 0.99301666, -4.5304205e-10, 1.9052229, -0.0032112598)
+no_depth_test = true
+sprite_frames = SubResource("SpriteFrames_s88eb")
+animation = &"EXPLODE"
+frame_progress = 0.3160856
+script = ExtResource("6_fdwjt")
+
+[node name="Confetti" type="GPUParticles3D" parent="Camera3D" unique_id=137417509]
+process_mode = 3
+transform = Transform3D(0.9758215, 0.00345984, 0.21854167, -0.00345984, 0.9999939, -0.0003826823, -0.21854167, -0.00038268883, 0.9758278, -0.51362675, -0.0046007633, -0.29060966)
+emitting = false
+amount = 200
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_56cgk")
+draw_pass_1 = SubResource("QuadMesh_kmmv4")
+
 [node name="CrouchCheck" type="RayCast3D" parent="." unique_id=318611466]
 transform = Transform3D(0.99999994, 0, 0, 0, -1.8588628, 8.742277e-08, 0, -1.6250694e-07, -0.99999994, 0, 0.15017164, 0)
 
@@ -38,13 +138,13 @@ transform = Transform3D(0.99999994, 0, 0, 0, -1.8588628, 8.742277e-08, 0, -1.625
 process_mode = 3
 script = ExtResource("2_6723c")
 
-[node name="quit_button2" type="Button" parent="CanvasLayer" unique_id=1116061009]
-offset_left = 836.0
+[node name="main_menu_button2" type="Button" parent="CanvasLayer" unique_id=1116061009]
+offset_left = 810.0
 offset_top = 613.0
-offset_right = 1125.0
+offset_right = 1167.0
 offset_bottom = 709.0
 theme_override_font_sizes/font_size = 64
-text = "QUIT"
+text = "Main Menu"
 script = ExtResource("3_15xqs")
 
 [node name="retry_button2" type="Button" parent="CanvasLayer" unique_id=324493744]
@@ -55,6 +155,110 @@ offset_bottom = 467.0
 theme_override_font_sizes/font_size = 64
 text = "RETRY"
 script = ExtResource("3_15xqs")
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1656676662]
+process_mode = 3
+script = ExtResource("2_6723c")
+
+[node name="Background" type="ColorRect" parent="PauseMenu" unique_id=105323232]
+offset_left = 508.0
+offset_top = 246.0
+offset_right = 555.6285
+offset_bottom = 294.6667
+scale = Vector2(20.428944, 11.999997)
+mouse_filter = 1
+color = Color(0.23921569, 0.23921569, 0.23921569, 0.34901962)
+
+[node name="PausePanel" type="Control" parent="PauseMenu" unique_id=1061719970]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="main_menu" type="Button" parent="PauseMenu/PausePanel" unique_id=772355630]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 613.0
+offset_right = 1167.0
+offset_bottom = 709.0
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+script = ExtResource("3_15xqs")
+
+[node name="retry" type="Button" parent="PauseMenu/PausePanel" unique_id=520706335]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 371.0
+offset_right = 1167.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 64
+text = "Retry"
+script = ExtResource("3_15xqs")
+
+[node name="options" type="Button" parent="PauseMenu/PausePanel" unique_id=556745344]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 490.0
+offset_right = 1167.0
+offset_bottom = 586.0
+theme_override_font_sizes/font_size = 64
+text = "Options"
+script = ExtResource("3_15xqs")
+
+[node name="OptionsPanel" type="Control" parent="PauseMenu" unique_id=406154230]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HSlider" type="HSlider" parent="PauseMenu/OptionsPanel" unique_id=315896017]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 428.0
+offset_right = 873.0
+offset_bottom = 463.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="HSlider2" type="HSlider" parent="PauseMenu/OptionsPanel" unique_id=1658869161]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 534.0
+offset_right = 874.0
+offset_bottom = 569.0
+min_value = 0.001
+max_value = 0.005
+step = 0.001
+value = 0.001
+
+[node name="Back_Button" type="Button" parent="PauseMenu/OptionsPanel" unique_id=1752052762]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 248.0
+offset_right = 631.0
+offset_bottom = 282.0
+text = "BACK"
+
+[node name="Label" type="Label" parent="PauseMenu/OptionsPanel" unique_id=366778522]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 388.0
+offset_right = 638.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 24
+text = "VOLUME"
+
+[node name="Label2" type="Label" parent="PauseMenu/OptionsPanel" unique_id=1342702415]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 494.0
+offset_right = 674.0
+offset_bottom = 528.0
+theme_override_font_sizes/font_size = 24
+text = "SENSITIVITY"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=874340972]
 
@@ -85,10 +289,72 @@ offset_bottom = 596.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.86, 0.86)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 40
 text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/quit_button2" to="CanvasLayer" method="_on_quit_button_2_pressed"]
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1122244698]
+
+[node name="ExplosionPlayer" type="AudioStreamPlayer3D" parent="." unique_id=697833380]
+process_mode = 3
+stream = ExtResource("16_y6jth")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1679535504]
+process_mode = 3
+script = ExtResource("17_jcoop")
+
+[node name="main_menu_button2" type="Button" parent="CanvasLayer3" unique_id=239907790]
+offset_left = 810.0
+offset_top = 792.0
+offset_right = 1167.0
+offset_bottom = 888.0
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+script = ExtResource("3_15xqs")
+
+[node name="retry_button3" type="Button" parent="CanvasLayer3" unique_id=692905524]
+offset_left = 810.0
+offset_top = 634.0
+offset_right = 1167.0
+offset_bottom = 730.0
+theme_override_font_sizes/font_size = 64
+text = "Retry"
+script = ExtResource("3_15xqs")
+
+[node name="Label" type="Label" parent="CanvasLayer3" unique_id=677222839]
+offset_left = 463.0
+offset_top = 40.0
+offset_right = 1556.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 23
+theme_override_constants/shadow_outline_size = 17
+theme_override_font_sizes/font_size = 220
+text = "YOU WIN!!"
+
+[node name="WinPlayer" type="AudioStreamPlayer3D" parent="." unique_id=193187214]
+process_mode = 3
+stream = ExtResource("18_2vm8s")
+
+[node name="GameplayMusic" type="AudioStreamPlayer3D" parent="." unique_id=747613041]
+stream = ExtResource("19_0y32g")
+volume_db = -35.124
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/main_menu_button2" to="CanvasLayer" method="_on_main_menu_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/retry_button2" to="CanvasLayer" method="_on_retry_button_2_pressed"]
+[connection signal="pressed" from="PauseMenu/PausePanel/main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/PausePanel/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="PauseMenu/PausePanel/options" to="." method="_on_options_pressed"]
+[connection signal="value_changed" from="PauseMenu/OptionsPanel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="PauseMenu/OptionsPanel/HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="pressed" from="PauseMenu/OptionsPanel/Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer3/main_menu_button2" to="CanvasLayer3" method="_on_main_menu_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer3/retry_button3" to="CanvasLayer3" method="_on_retry_button_3_pressed"]

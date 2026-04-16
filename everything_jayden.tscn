@@ -1,26 +1,33 @@
-[gd_scene format=4 uid="uid://d4ncp2gb1qtqp"]
+[gd_scene format=4 uid="uid://gv8wq4uwahaw"]
 
 [ext_resource type="PackedScene" uid="uid://d28bk8xtieoar" path="res://Test Player.tscn" id="1_yt2pt"]
-[ext_resource type="Texture2D" uid="uid://3p74av2eqn74" path="res://IMG_1230.png" id="2_grahb"]
+[ext_resource type="Texture2D" uid="uid://dr6unfbqaffp7" path="res://IMG_1230.png" id="2_grahb"]
 [ext_resource type="Script" uid="uid://xhdlxupvp0nb" path="res://bDoorInteract.gd" id="3_bvsqy"]
 [ext_resource type="Script" uid="uid://cwigbsw1je2j8" path="res://glow_script.gd" id="4_xrf65"]
-[ext_resource type="Material" path="res://shirt1.material" id="5_oj3m3"]
-[ext_resource type="Texture2D" uid="uid://dr0rwwymnsyid" path="res://woodtext.jpg" id="6_hc2bp"]
+[ext_resource type="Material" uid="uid://btxjsjeynbbnp" path="res://shirt1.material" id="5_oj3m3"]
+[ext_resource type="Texture2D" uid="uid://bfddp7marx7lt" path="res://woodtext.jpg" id="6_hc2bp"]
 [ext_resource type="Material" uid="uid://dfld2rrhhhr02" path="res://metal.tres" id="7_dd3n2"]
+[ext_resource type="AudioStream" uid="uid://bsn0eyov3dw3e" path="res://ClothSFX.mp3" id="8_a3ss1"]
 [ext_resource type="Material" uid="uid://dhn351hmv721v" path="res://shirt2.tres" id="8_x61ea"]
 [ext_resource type="Material" uid="uid://c2rw77eeh56wj" path="res://shirt3.tres" id="9_a3ss1"]
-[ext_resource type="PackedScene" path="res://carbinert.tscn" id="10_vctsg"]
+[ext_resource type="PackedScene" uid="uid://5xil3wyjgcqk" path="res://carbinert.tscn" id="10_vctsg"]
 [ext_resource type="PackedScene" uid="uid://pu3ll25kpqry" path="res://window_2.tscn" id="11_ddq2p"]
-[ext_resource type="Material" path="res://wood1.tres" id="12_u01n8"]
-[ext_resource type="Material" path="res://quilt.tres" id="13_0q4vm"]
-[ext_resource type="Texture2D" uid="uid://ca58k2amvcheo" path="res://IMG_1231.png" id="14_3wb8o"]
-[ext_resource type="ArrayMesh" path="res://raindrop.res" id="15_qwnnr"]
+[ext_resource type="Material" uid="uid://bup8rnryxbnnh" path="res://wood1.tres" id="12_u01n8"]
+[ext_resource type="Material" uid="uid://bqtj0jblyhq87" path="res://quilt.tres" id="13_0q4vm"]
+[ext_resource type="Texture2D" uid="uid://b5m23mj386t1f" path="res://IMG_1231.png" id="14_3wb8o"]
+[ext_resource type="AudioStream" uid="uid://c8r6yx7isw8dp" path="res://ShowerOn.mp3" id="15_hc2bp"]
+[ext_resource type="ArrayMesh" uid="uid://colmxhtcapvj6" path="res://raindrop.res" id="15_qwnnr"]
 [ext_resource type="PackedScene" uid="uid://8flwb1e4yhmj" path="res://carbinertbath.tscn" id="16_naqcd"]
 [ext_resource type="Script" uid="uid://dnh1g33qx3ty0" path="res://main_handle.gd" id="17_1pgrl"]
+[ext_resource type="AudioStream" uid="uid://de81lde6kjmon" path="res://ScrubbingSFX.mp3" id="17_dd3n2"]
 [ext_resource type="Script" uid="uid://b3o8mdvpao6t" path="res://inside_glow.gd" id="18_c8ef3"]
+[ext_resource type="AudioStream" uid="uid://c3bhthakvfwfm" path="res://Teeth_Brush.mp3" id="18_dd3n2"]
 [ext_resource type="Script" uid="uid://cwkyw2p8hj8v2" path="res://outside_glow.gd" id="19_rnhx5"]
+[ext_resource type="AudioStream" uid="uid://d171wxpxty1bc" path="res://door open.mp3" id="20_bvsqy"]
 [ext_resource type="Texture2D" uid="uid://b4o1hlxe45iah" path="res://20260413_162920.jpg" id="20_dpphp"]
-[ext_resource type="Texture2D" uid="uid://cbaj74uwfhbwk" path="res://Sky_Anime_03_Day_a.png" id="21_mmq4b"]
+[ext_resource type="Texture2D" uid="uid://t04vjkh2l6i3" path="res://Sky_Anime_03_Day_a.png" id="21_mmq4b"]
+[ext_resource type="AudioStream" uid="uid://c46oieewi2150" path="res://Alarm_SFX.mp3" id="22_grahb"]
+[ext_resource type="AudioStream" uid="uid://c6d0qfddgmfc4" path="res://ButtonPress.mp3" id="26_x61ea"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k81pi"]
 albedo_texture = ExtResource("2_grahb")
@@ -1454,6 +1461,9 @@ shadow_mesh = SubResource("ArrayMesh_h6tuy")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjips"]
 albedo_color = Color(0.9882353, 0.20784314, 0.105882354, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yt2pt"]
+size = Vector3(2.1900635, 5.567444, 1.9012451)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4t5k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5lff"]
@@ -2134,7 +2144,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_uqqf5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eix0s"]
-size = Vector3(0.4711914, 4.0444336, 1.9918213)
+size = Vector3(4.285858, 14.039673, 3.8055725)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q51k0"]
 resource_name = "Porcelain"
@@ -2454,8 +2464,11 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ty11d")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_clf10"]
-height = 69.14691
-radius = 47.691895
+height = 205.091
+radius = 92.68555
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_grahb"]
+size = Vector3(56.750122, 16.640747, 1.8511963)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trm5t"]
 resource_name = "silver.metal"
@@ -2811,9 +2824,12 @@ sky_material = SubResource("PanoramaSkyMaterial_x2lnx")
 background_mode = 2
 background_energy_multiplier = 0.9
 sky = SubResource("Sky_tndcu")
-ambient_light_color = Color(0.65648144, 0.52455574, 0.120740764, 1)
+ambient_light_color = Color(0.25812346, 0.26036072, 0.8281061, 1)
 ambient_light_sky_contribution = 0.95
-ambient_light_energy = 5.56
+ambient_light_energy = 0.3
+tonemap_mode = 3
+ssao_enabled = true
+glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ho1v"]
 resource_name = "Material"
@@ -2946,6 +2962,9 @@ surface_material_override/1 = ExtResource("7_dd3n2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/bedroom/backwall/shirt1_interact/shirt1_glow" unique_id=1859949313]
 transform = Transform3D(1, 7.4505806e-08, -2.0605512e-07, 7.450581e-09, 1, -6.552e-08, -3.5972334e-08, -1.7917118e-06, 0.9998226, -0.06518245, -0.009735584, -0.26765156)
 shape = SubResource("BoxShape3D_clf10")
+
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/bedroom/backwall/shirt1_interact" unique_id=198514357]
+stream = ExtResource("8_a3ss1")
 
 [node name="shirt2_interact" type="StaticBody3D" parent="room/bedroom/backwall" unique_id=1695139881]
 transform = Transform3D(-77.63842, -0.4915329, -1.5553356, -0.27030745, 44.10686, -0.5374662, 0.74028826, -0.44627246, -52.569847, -92.46646, -24.641998, 57.42827)
@@ -3089,6 +3108,9 @@ surface_material_override/0 = ExtResource("9_a3ss1")
 transform = Transform3D(0.9999999, 2.8510527e-13, -2.6822988e-13, 3.5527137e-15, 0.9999999, 7.450581e-09, 3.5527137e-14, -1.9791237e-16, 0.9999999, 0.09925032, 0.045590878, 1.0690956)
 shape = SubResource("BoxShape3D_s22w0")
 
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/bedroom/backwall/pants2_interact" unique_id=1187737581]
+stream = ExtResource("8_a3ss1")
+
 [node name="frontwall" type="CSGBox3D" parent="room/bedroom" unique_id=380123452]
 transform = Transform3D(-3.4969116e-08, -0.8, -3.4969112e-08, 8.305159e-09, -3.9777365e-08, 0.91, -0.72, 3.1472194e-08, -8.305159e-09, 299.60007, 173.81006, 264.16006)
 use_collision = true
@@ -3111,7 +3133,8 @@ transform = Transform3D(22.770647, 0, 0, 0, 18.733109, 0, 0, 0, 21.47719, 294.24
 
 [node name="Light" type="OmniLight3D" parent="room/bedroom/light_bedroom" unique_id=2076205893]
 transform = Transform3D(0.9999377, -0.0072565344, 0.008511011, 0.007549586, 0.9993621, -0.03490889, -0.008252309, 0.03497097, 0.99935436, -0.078474104, 2.38859, -0.19446477)
-light_energy = 2.285
+light_color = Color(0.9529412, 0.70980394, 0.41960785, 1)
+light_energy = 1.81
 omni_range = 4096.0
 omni_attenuation = 2.0
 
@@ -3214,6 +3237,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0367334, -0.057985246, 0.15
 mesh = SubResource("ArrayMesh_7byqc")
 surface_material_override/0 = SubResource("StandardMaterial3D_jjips")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bedroom/bed_interact" unique_id=999783729]
+transform = Transform3D(1, 0, 4.656613e-10, -4.718142e-28, 0.99999976, 5.1017114e-29, 5.820766e-11, -5.293956e-23, 1, 0.09258652, 1.8403621, -0.13018787)
+shape = SubResource("BoxShape3D_yt2pt")
+
 [node name="bathroom" type="Node3D" parent="room" unique_id=1172865070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
 
@@ -3294,7 +3321,7 @@ collision_mask = 2
 script = ExtResource("4_xrf65")
 
 [node name="handle" type="MeshInstance3D" parent="room/bathroom/backwall/backwall_shower/showerhead/shower_handle_interact/shower_handle_glow" unique_id=1681096454]
-transform = Transform3D(87.091125, 11.321909, 37.569954, -2.8385062, 65.0728, -23.618958, -49.061962, 16.332987, 68.05786, 1175.5078, 261.9331, -1022.7261)
+transform = Transform3D(87.09117, 11.321909, 37.569954, -2.8385074, 65.0728, -23.618958, -49.061985, 16.332987, 68.05786, 1175.5078, 261.9331, -1022.7261)
 mesh = SubResource("ArrayMesh_be8th")
 
 [node name="Cube_001" type="MeshInstance3D" parent="room/bathroom/backwall/backwall_shower/showerhead/shower_handle_interact/shower_handle_glow/handle" unique_id=487158578]
@@ -3308,6 +3335,9 @@ mesh = SubResource("ArrayMesh_aggw4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/backwall/backwall_shower/showerhead/shower_handle_interact/shower_handle_glow" unique_id=566761120]
 transform = Transform3D(1, -3.7252903e-09, -3.7252903e-08, 1.182853e-07, 1, 4.4703484e-08, -4.172325e-07, -1.5200769e-08, 0.9999999, 1231.1006, 131.15942, -772.68774)
 shape = SubResource("SphereShape3D_lhwyw")
+
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/bathroom/backwall/backwall_shower/showerhead/shower_handle_interact" unique_id=1919114014]
+stream = ExtResource("15_hc2bp")
 
 [node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="room/bathroom/backwall/backwall_shower/showerhead" unique_id=1445090487]
 transform = Transform3D(0.9999996, -1.0835777e-13, -1.569655e-16, -2.6645353e-15, 0.99994785, 2.6645353e-15, -4.0391457e-16, -1.2541079e-12, 1, 59.647278, 0.72784424, 42.25641)
@@ -3372,6 +3402,10 @@ mesh = SubResource("ArrayMesh_lsbmd")
 transform = Transform3D(0.9999929, -1.1362135e-06, 5.9604645e-08, 4.33065e-08, 0.9999918, -2.0023435e-08, 1.6093254e-06, -7.022172e-07, 1, -7.6293945e-06, 0.4454956, 7.6293945e-06)
 shape = SubResource("CylinderShape3D_oo0qu")
 
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/bathroom/backwall/ledge/conditioner_interact" unique_id=1633456262]
+stream = ExtResource("17_dd3n2")
+volume_db = -3.0
+
 [node name="shampoo_interact" type="StaticBody3D" parent="room/bathroom/backwall/ledge" unique_id=1913310232]
 transform = Transform3D(-6.908622, 0.04258919, -1.1265634, -1.1273671, -0.26098967, 6.9036894, 2.1974218e-07, 6.995005, 0.2644418, 224.34206, -203.66385, 156.92506)
 script = ExtResource("3_bvsqy")
@@ -3408,6 +3442,10 @@ mesh = SubResource("ArrayMesh_uu7if")
 transform = Transform3D(1, 7.4505806e-08, 0, -1.8626451e-09, 1.0000153, 2.2351742e-08, 1.1920929e-07, 1.15484e-07, 1, 0, 2.15246, 0)
 shape = SubResource("CylinderShape3D_3knw7")
 
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/bathroom/backwall/ledge/shampoo_interact" unique_id=26298504]
+stream = ExtResource("17_dd3n2")
+volume_db = -3.0
+
 [node name="frontwall" type="CSGBox3D" parent="room/bathroom" unique_id=691551223]
 transform = Transform3D(-2.7975467e-08, 0.8000001, 3.496911e-08, 8.305196e-09, -3.977736e-08, 0.90999985, 0.71999997, 3.8466137e-08, 8.305287e-09, -465.4001, 173.81001, -260.44025)
 use_collision = true
@@ -3419,7 +3457,9 @@ transform = Transform3D(21.9843, 0, 0, 0, 19.685543, 0, 0, 0, 21.668678, -492.46
 
 [node name="Light" type="OmniLight3D" parent="room/bathroom/light" unique_id=360350179]
 transform = Transform3D(0.9999377, -0.0072565344, 0.008511011, 0.007549586, 0.9993621, -0.03490889, -0.008252309, 0.03497097, 0.99935436, -0.078474104, 2.38859, -0.19446477)
-light_energy = 3.492
+light_color = Color(0.9540126, 0.7089787, 0.41920248, 1)
+light_energy = 1.908
+shadow_enabled = true
 omni_range = 4096.0
 omni_attenuation = 2.0
 
@@ -3431,34 +3471,41 @@ mesh = SubResource("ArrayMesh_gp3d3")
 transform = Transform3D(1.5938064, 0, 0, 0, 0.25034606, 0, 0, 0, 1.5787327, 0, 2.6754935, 0)
 mesh = SubResource("ArrayMesh_hjdf2")
 
-[node name="carbinertbath" parent="room/bathroom" unique_id=297664849 instance=ExtResource("16_naqcd")]
-transform = Transform3D(-119.999825, 0, 0.20106208, 0, 119.999985, 0, -0.20106208, 0, -119.999825, -726.6876, -0.66304195, 167.35933)
-
-[node name="toothbrush_interact" type="StaticBody3D" parent="room/bathroom/carbinertbath" unique_id=1778835913]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.2423363, 0, 0, 0, 2.4137304, 0, 0, 0)
+[node name="toothbrush_interact" type="StaticBody3D" parent="room/bathroom" unique_id=1778835913]
+transform = Transform3D(-119.98186, 0, 0.48523706, 0, 29.076002, 0, -0.20103198, 0, -289.60388, -726.68744, -0.6630418, 167.35928)
 script = ExtResource("3_bvsqy")
 item_name = "Toothbrush"
 
-[node name="toothbrush_glow" type="StaticBody3D" parent="room/bathroom/carbinertbath/toothbrush_interact" unique_id=246728589]
+[node name="toothbrush_glow" type="StaticBody3D" parent="room/bathroom/toothbrush_interact" unique_id=246728589]
 transform = Transform3D(0.0006532459, 0, -0.1311573, 0, 0.049999896, 0, 0.038822427, 0, 0.0022069195, -0.035108566, 4.653209, 0.16825026)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_xrf65")
 
-[node name="Cube" type="MeshInstance3D" parent="room/bathroom/carbinertbath/toothbrush_interact/toothbrush_glow" unique_id=783894009]
+[node name="Cube" type="MeshInstance3D" parent="room/bathroom/toothbrush_interact/toothbrush_glow" unique_id=783894009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_2cntk")
 
-[node name="Circle_093" type="MeshInstance3D" parent="room/bathroom/carbinertbath/toothbrush_interact/toothbrush_glow" unique_id=1019987962]
+[node name="Circle_093" type="MeshInstance3D" parent="room/bathroom/toothbrush_interact/toothbrush_glow" unique_id=1019987962]
 transform = Transform3D(0.02534702, 0, 0, 0, 4.1264963, 0, -1.8189894e-12, 0, 0.01050118, 0.058326244, 0, -0.6611989)
 mesh = SubResource("ArrayMesh_1jtgy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/carbinertbath/toothbrush_interact/toothbrush_glow" unique_id=1075898987]
-transform = Transform3D(1, 0, 0, 0, 0.5520813, 0, 0, 0, 0.9999999, -0.03687191, -0.18047333, -0.022640228)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/toothbrush_interact/toothbrush_glow" unique_id=1075898987]
+transform = Transform3D(1, 0, -1.7248094e-06, 0, 0.5520817, 0, -7.171184e-08, 0, 1, -1.1631613, 2.5786057, -0.14427948)
 shape = SubResource("BoxShape3D_eix0s")
+
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/bathroom/toothbrush_interact" unique_id=1132199465]
+transform = Transform3D(0.9260647, 0, 0, 0, 3.8214025, 0, -5.820766e-11, 0, 0.38366526, 0, 0, 0)
+stream = ExtResource("18_dd3n2")
+volume_db = 6.0
+
+[node name="carbinertbath" parent="room/bathroom" unique_id=297664849 instance=ExtResource("16_naqcd")]
+transform = Transform3D(-120.178986, 0, 0.20136227, 0, 120.179146, 0, -0.20136227, 0, -120.178986, -726.3309, -2.2135305, 167.26274)
 
 [node name="toilet" type="StaticBody3D" parent="room/bathroom" unique_id=514799333]
 transform = Transform3D(1, 0, -7.450581e-09, 0, 1, 0, -7.450581e-09, 0, 1.0000001, -4.7683716e-07, 0, 1.1920929e-07)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("3_bvsqy")
 interaction_type = "Explode"
 item_name = "Toilet"
@@ -3505,8 +3552,12 @@ transform = Transform3D(0.08942547, 0, 2.252974, 0, 2.2547479, 0, -2.2529738, 0,
 mesh = SubResource("ArrayMesh_mwyry")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/toilet/toilet_glow" unique_id=1281991917]
-transform = Transform3D(0.999988, 0, 1.7763568e-15, 0, 0.999988, 0, 0, 0, 0.99999976, -669.8958, 35.47967, -135.68431)
+transform = Transform3D(0.9999415, 0, 1.7763568e-15, 0, 0.9999415, 0, 0, 0, 0.99999976, -701.04584, 52.20568, -135.68431)
 shape = SubResource("CylinderShape3D_clf10")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="room/bathroom/toilet" unique_id=1492734441]
+transform = Transform3D(2.5002158, 0, 2.2737368e-13, 0, 9.18527, 0, 0, 0, 35.15365, -694.89514, 82.5293, -139.72829)
+shape = SubResource("BoxShape3D_grahb")
 
 [node name="doorfixed_living" type="StaticBody3D" parent="room" unique_id=1873790382]
 transform = Transform3D(29.279343, 0, 0.23778757, 0, 32.44056, 0, -0.24529497, 0, 28.383232, -55.555386, 4.054427, -276.9402)
@@ -3558,6 +3609,9 @@ mesh = SubResource("ArrayMesh_6ke0j")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="room/doorfixed_living/insideHandle" unique_id=196272123]
 transform = Transform3D(0.9999984, 0, -1.3038516e-08, 0, 1, 0, 1.21071935e-08, 0, 0.9999867, 4.022582, 4.216394, 0.7781153)
 shape = SubResource("BoxShape3D_srj15")
+
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/doorfixed_living" unique_id=825702811]
+stream = ExtResource("20_bvsqy")
 
 [node name="doorfixed_bathroom" type="StaticBody3D" parent="room" unique_id=761847195]
 transform = Transform3D(0.24927492, 0, 28.382692, 0, 32.440563, 0, -26.25355, 0, 0.26949096, -120.54065, 4.054427, 56.622402)
@@ -3658,6 +3712,9 @@ layers = 3
 material_override = ExtResource("7_dd3n2")
 mesh = SubResource("ArrayMesh_xqu0u")
 
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="room/doorfixed_bathroom" unique_id=780716445]
+stream = ExtResource("20_bvsqy")
+
 [node name="ceiling" type="CSGBox3D" parent="room" unique_id=1381998835]
 transform = Transform3D(22.296093, 0, 0, 0, 0.9999997, 0, 0, 0, 113.32147, -17.905449, 347.303, 102.77572)
 use_collision = true
@@ -3692,3 +3749,26 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bnng4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clock2/Clock" unique_id=1717407479]
 transform = Transform3D(1.9565675, 0, 0, 0, 0.16762352, 0, 0, 0, 1, 3.998961, 1.0212212, 1.4528384)
 shape = SubResource("BoxShape3D_otq2g")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Clock2" unique_id=11581826]
+stream = ExtResource("22_grahb")
+autoplay = true
+
+[node name="InteractionSFX" type="AudioStreamPlayer3D" parent="Clock2" unique_id=1491437462]
+stream = ExtResource("26_x61ea")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1044007247]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, -2.9069438, 0.061651565, 1.8088727)
+transparency = 1.0
+cast_shadow = 0
+use_collision = true
+size = Vector3(3.695343, 0.026745116, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1918619115]
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.96592593, 0.25881907, 8.7422784e-08, 0.25881907, -0.96592593, -2.9069438, 0.061651565, 2.982106)
+transparency = 1.0
+cast_shadow = 0
+use_collision = true
+size = Vector3(3.695343, 0.026745116, 1)
+
+[editable path="room/bathroom/carbinertbath"]
